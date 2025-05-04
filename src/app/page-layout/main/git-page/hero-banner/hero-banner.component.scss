@@ -1,0 +1,31 @@
+@use '../../../../../assets/styles/media' as *;
+@use '../../../../../assets/styles/mixins' as *;
+
+.banner__inner {
+  min-height: 200px;
+  padding:  16px;
+  background: var(--white);
+  @include background-snow;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.banner__text-wrap {
+  display: grid;
+  grid-row-gap: 16px;
+}
+.banner-heading {
+  text-align: center;
+}
+
+.banner__text {
+  max-width: 800px;
+}
+
+
+.banner__image-wrap {
+  flex-shrink: 0;
+  height: 150px;
+  width: 100px;
+}
+

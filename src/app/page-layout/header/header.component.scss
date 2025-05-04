@@ -1,0 +1,77 @@
+@use '../../../assets/styles/media' as *;
+@use '../../../assets/styles/mixins' as *;
+
+
+.header {
+	z-index: 10;
+	background: var(--blue-main-theme);
+  height: 60px;
+	position: fixed;
+	width: 100%;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 12px;
+	height: inherit;
+	position: relative;
+}
+
+.header__inner:after {
+	content: '';
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background: var(--main-light-blue-transparent);
+
+		 @include laptop-min-width {
+			height: 1px;
+			background: var(--blue-tiny--divider);			
+		}		
+}
+
+.header__auth-buttons {
+	display: flex;
+	gap: 12px;
+	position: relative;
+}
+
+.header__logo-link {
+	position: absolute;
+	left: 78px;
+	top: 10px;
+}
+
+.header__logo-link:before {
+	position: absolute;
+	content: '';
+	height: calc(100% - 6px);
+	left: -18px;
+	width: 1px; 
+	background: var(--blue-vertical-category-divider);
+}
+
+.header__nav-control {
+	@include flex-center;
+	transition: transform 0.2s ease;
+}
+
+.header__nav-control
+ {
+	@include hover{
+		transform: scale(1.05);
+	}
+	
+}
+
+.header__nav-control:active {
+	transform: scale(1.1);
+}
+
+.burger-icon--hidden {
+	display: none;
+}

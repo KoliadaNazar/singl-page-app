@@ -1,0 +1,33 @@
+<header class="header">
+  <div class="header__inner">
+    <button (click)="toggleSidebar()" class="header__nav-control" type="button" aria-label="Open and close sidebar">
+        <svg class="header__burger-icon" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M3 6h10v2H3zm0 10h10v2H3zm0-5h12v2H3zm13-4l-1.42 1.39L18.14 12l-3.56 3.61L16 17l5-5z"/>
+        </svg>
+        <svg class="header__burger-close burger-icon--hidden" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M3 18v-2h13v2zm16.6-1l-5-5l5-5L21 8.4L17.4 12l3.6 3.6zM3 13v-2h10v2zm0-5V6h13v2z"/>
+        </svg>
+    </button>
+      <a class="header__logo-link " href="/">
+        <svg width="40" height="40" viewBox="19 9 45 45" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#000000"/>
+            <stop offset="100%" stop-color="#00c1ff"/>
+          </linearGradient>
+        </defs>
+        <circle cx="41.5" cy="31.02" r="20" stroke="url(#grad)" stroke-width="2.5" fill="none" />
+        <line x1="25" y1="25" x2="75" y2="25" stroke="url(#grad)" stroke-width="1.5" />
+        <text x="27.5" y="37.5" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="url(#grad)">NK</text>
+        </svg>
+      </a>
+    <div class="header__auth-buttons">
+      <button class="button button-small-medium" type="button">Log in
+        <span class="button-background button-primary"></span>
+      </button>
+      <button class="button button-small-medium" id="openForm" type="button">Sign up
+        <span class="button-background button-secondary"></span>
+      </button>
+    </div>
+  </div>
+</header>

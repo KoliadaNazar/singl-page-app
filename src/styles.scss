@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+@use './assets/styles/media' as *;
+@use './assets/styles/mixins.scss' as *;
+@use './assets/styles/globals' as *;
+@use './assets/styles/normalize' as *;
+@use './assets/styles/variables' as *;
+@use './assets/styles/keyframes' as *;
+@use './assets/styles/buttons' as *;

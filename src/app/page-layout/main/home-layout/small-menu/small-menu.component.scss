@@ -1,0 +1,57 @@
+@use '../../../../../assets/styles/media' as *;
+@use '../../../../../assets/styles/mixins' as *;
+
+
+.small-menu__inner  {
+	display: grid;
+	place-items: center;
+	overflow-x: auto;
+}
+.small-menu__grid {
+	position:relative;
+  display: grid;
+	grid-column-gap: 50px;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+	padding-right: 18px;
+}
+
+.small-menu__grid-item {
+	position: relative;
+  margin: 6px 6px 16px 6px;
+}
+
+.small-menu__grid-item:not(:last-child):after { 
+	position: absolute;
+	content: '';
+	height: calc(100% - 6px);
+	right: -30px;
+	bottom: 2px;
+	width: 1px; 
+	background: var(--blue-vertical-category-divider);
+}
+
+.small-menu__title {
+	 min-width: 50px;
+  min-height: 80px;
+	border: 2px solid var(--main-light-blue-transparent);
+  border-radius: 8px;
+  padding:6px;
+	color:var(--main-light-blue-transparent);
+	font-weight: 600;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-style: italic;
+ 	text-align: center;
+ 	@include flex-center;
+ 	transform: rotate(8deg);
+	transition: transform 0.2s ease-in-out;
+}
+
+.small-menu__title {
+  @include hover {
+    color: var(--white);
+		border: 2px solid var(--white);
+		transform: rotate(6deg) scale(1.04);
+  }
+}
