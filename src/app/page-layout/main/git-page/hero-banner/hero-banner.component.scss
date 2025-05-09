@@ -1,6 +1,13 @@
 @use '../../../../../assets/styles/media' as *;
 @use '../../../../../assets/styles/mixins' as *;
 
+.hero-banner {
+  padding-top: 38px;
+    @include laptop-min-width {
+      padding-top: 54px;
+    }
+}
+
 .banner__inner {
   min-height: 200px;
   padding:  16px;
