@@ -56,7 +56,8 @@
   border-top: 1px solid var(--main-light-blue-transparent);
   height: 50px;
   width: inherit;
-  /*background-image: url('/img/info_card_bg.png'); */
+  background-image: url('/img/info_card_bg.png');
+  /*background: var(--red-button-background);*/
   background-size: 100% 100%;
   text-transform: uppercase;
   font-weight:600;

@@ -1,0 +1,33 @@
+@use '../../../../../assets/styles/media' as *;
+@use '../../../../../assets/styles/mixins' as *;
+
+
+.article__inner {
+  padding: 12px;
+  background: var(--white);
+  display: grid;
+  grid-row-gap: 16px;
+  
+    @include tablet-min-width {
+      padding: 32px 96px;
+    }
+}
+
+.article__separator {
+  width: 100%;
+  height: 1px;
+  background: var(--blue-horisonal-stylish-separator);
+}
+
+.article__content {
+  @include tablet-min-width {
+    padding-inline-start: 20px;
+  }
+}
+
+
+.article__list-item {
+  margin-inline-start: 30px;
+  padding-top: 8px;
+  list-style-type: disc;
+}

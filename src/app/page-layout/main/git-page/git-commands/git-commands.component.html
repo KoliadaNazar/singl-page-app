@@ -1,0 +1,135 @@
+<div class="hero-banner  banner__container"> 
+  <div class=" banner__inner banner--border ">
+    <div class="banner__text-wrap">
+      <h1 class="banner-heading">Base Git Commands</h1>
+      <div class="article__separator"></div>
+      <div class="banner__code">
+        <pre>
+          <code class="language-git">
+      # Check installed Git version
+      git --version
+      
+      # Set user name and email globally
+      git config --global "user.name"
+      git config --global "user.email"
+      
+      # View current Git configuration
+      git config --list
+      
+      # Initialize a new Git repository
+      git init
+      
+      # Check repository status
+      git status
+      
+      # Track a specific file
+      git add "filename.txt"
+      
+      # Track all changes
+      git add .
+      
+      # Commit changes with a message
+      git commit -m "Initial commit"
+      
+      # Amend the last commit
+      git commit --amend
+      
+      # View commit history
+      git log
+      git log --oneline --graph --all
+      
+      # Connect to a remote repository
+      git remote add origin URL "https://git..."
+      
+      # Verify remote URL
+      git remote -v
+      
+      # Push local branch to remote
+            (first time)
+      git push -u origin main
+      
+      # Clone an existing remote repository
+      git clone URL "https://git..."
+      
+      # Pull latest changes from remote
+      git pull
+      
+      # Create and switch to a new branch
+      git checkout -b feature-branch
+      
+      # Switch to an existing branch
+      git checkout main
+      
+      # Rename current branch
+      git branch -m new-name
+      
+      # List all branches
+      git branch
+      
+      # Delete a local branch
+      git branch -d branch-name
+      
+      # Delete a remote branch
+      git push origin --delete branch-name
+      
+      # Merge another branch into current
+      git merge feature-branch
+      
+      # Rebase current branch into another
+      git rebase main
+      
+      # Abort an in-progress rebase
+      git rebase --abort
+      
+      # Continue rebase after conflict
+        resolution
+      git rebase --continue
+      
+      # Show what changed (unstaged)
+      git diff
+      
+      # Show staged changes
+      git diff --cached
+      
+      # Show difference from last commit
+      git diff HEAD
+      
+      # Blame line-by-line changes in a file
+      git blame filename.txt
+      
+      # Reset index (unstage files)
+      git reset HEAD
+      
+      # Hard reset to a specific commit
+            (dangerous)
+      git reset --hard commit_hash
+      
+      # Clean untracked files and folders
+      git clean -fd
+      
+      # Temporarily save changes
+      git stash
+      
+      # List stashed changes
+      git stash list
+      
+      # Apply the most recent stash
+      git stash apply
+      
+      # Remove all stashes
+      git stash clear
+      
+      # Tag a commit
+      git tag v1.0
+      
+      # Push a tag to remote
+      git push origin v1.0
+          </code>
+        </pre>
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+
