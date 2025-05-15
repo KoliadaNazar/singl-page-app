@@ -1,6 +1,5 @@
-@use '../../../../../assets/styles/media' as *;
-@use '../../../../../assets/styles/mixins' as *;
-
+@use 'media' as *;
+@use 'mixins' as *;
 
 .info-cards_inner {
   display: grid;
