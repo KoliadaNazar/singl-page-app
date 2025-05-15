@@ -91,11 +91,11 @@ html {
   height: 100%;
 }
 
-/**Плавный скролл*/
+/*Плавный скролл
 html,
 :has(:target) {
   scroll-behavior: smooth;
-}
+}*/
 
 body {
   /**

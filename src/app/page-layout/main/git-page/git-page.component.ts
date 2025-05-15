@@ -5,11 +5,16 @@ import { HeaderSubnavComponent } from './header-subnav/header-subnav.component';
 import { GitRepoBannerComponent } from './git-repo-banner/git-repo-banner.component';
 import { GitRepositoriesComponent } from './git-repositories/git-repositories.component';
 import { GitCommandsComponent } from './git-commands/git-commands.component';
+import { RouterOutlet, RouterLink } from '@angular/router';
+
+
+
 
 
 @Component({
   selector: 'app-git-page',
   imports: [
+    RouterOutlet, RouterLink,
     HeroBannerComponent,
     GitRoleComponent,
     HeaderSubnavComponent,

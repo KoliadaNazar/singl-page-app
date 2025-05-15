@@ -5,11 +5,11 @@
       </svg>
     </button> 
     <div class="submenu__grid-container" #submenuContainer>
-      <a class="submenu__link">Git home</a>
-      <a class="submenu__link">introducin</a>
-      <a class="submenu__link">basic</a>
-      <a class="submenu__link">Commands</a>
-      <a class="submenu__link">git every day</a>
+      <a class="submenu__link"   (click)="scrollToBanner('git-home')">Git home</a>
+      <a class="submenu__link" (click)="scrollToBanner('git-bennefits')">Git bennefits</a>
+      <a class="submenu__link" (click)="scrollToBanner('git-repositories')">Git Repositories</a>
+      <a class="submenu__link" (click)="scrollToBanner('git-commands')">Commands</a>
+      <a class="submenu__link">Basic Commands</a>
       <a class="submenu__link">special</a>
       <a class="submenu__link">begginers</a>
       <a class="submenu__link">Gmiddle</a>

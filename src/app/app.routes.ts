@@ -1,11 +1,13 @@
 import { Routes } from '@angular/router';
 
 import { GitPageComponent } from './page-layout/main/git-page/git-page.component';
+import { GitCommandsComponent } from './page-layout/main/git-page/git-commands/git-commands.component';
 import { HomeLayoutComponent } from './page-layout/main/home-layout/home-layout.component';
 
 
 
 export const routes: Routes = [
+  
 
   {
     path: '', 
@@ -14,11 +16,11 @@ export const routes: Routes = [
   },
 
 
-
   { 
-    path: 'git',
-    component: GitPageComponent 
+    path: 'git-page',
+    component: GitPageComponent
   },
+
   
   { path: '**', redirectTo: '' } 
 ];

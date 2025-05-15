@@ -15,11 +15,12 @@
   height: 100%;
   margin: 0 auto;
   background: var(--white);
-  border-bottom: 2px solid var(--main-light-blue-transparent);
+  border-bottom: 2px solid var(--grey-basic);
 
     @include laptop-min-width {
       border-bottom-left-radius: 50px;  
       border-bottom-right-radius: 50px;
+      
     }
 
 }
