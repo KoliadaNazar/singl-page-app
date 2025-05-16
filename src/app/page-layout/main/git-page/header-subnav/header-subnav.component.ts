@@ -15,7 +15,7 @@ export class HeaderSubnavComponent {
 
 
   scrollToBanner(bannerId: string) {
-    const yOffset = -86; // смещение на 76 пикселей
+    const yOffset = -110; // смещение на 76 пикселей
     const element = document.getElementById(bannerId);
     const yPosition = element ? element.getBoundingClientRect().top + window.pageYOffset + yOffset : 0;
     window.scrollTo({ top: yPosition, behavior: 'smooth' });

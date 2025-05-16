@@ -16,5 +16,19 @@ export class HeaderComponent {
     sidebar?.classList.toggle('sidebar--open');
     burger?.classList.toggle('burger-icon--hidden');
     close?.classList.toggle('burger-icon--hidden');
+
   }
+
+  ngAfterViewInit() {
+    const navLinks = document.querySelectorAll('.nav-list__link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const sidebar = document.querySelector('.sidebar');
+        if (sidebar?.classList.contains('sidebar--open')) {
+          this.toggleSidebar();
+        }
+      });
+    });
+  }
+  
 }

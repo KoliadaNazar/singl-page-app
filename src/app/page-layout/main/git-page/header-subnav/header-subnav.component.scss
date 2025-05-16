@@ -6,8 +6,11 @@
 .submenu {
   position: fixed;
   z-index: 9;
-  height: 38px;
+  height: 50px;
   width: 100%;
+  @include laptop-min-width { 
+    height: 38px;
+  }
 }
 
 .submenu__inner {
@@ -70,14 +73,16 @@
 .submenu__arrow-prew {
   position: absolute;
   left: 2px;
-  top: 5px;
+  top: 54%;
+  transform: translateY(-50%);
     @include laptop-min-width {left: 16px;}
 }
 
 .submenu__arrow-next {
   position: absolute;
   right: 2px;
-  top: 5px;
+  top: 54%;
+  transform: translateY(-50%);
 
     @include laptop-min-width {right: 16px;}
 }

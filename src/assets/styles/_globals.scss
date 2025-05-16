@@ -5,6 +5,9 @@
   background: rgba(0, 18, 36, 0.9);
   box-shadow: inset 0 0 100px rgba(0, 77, 153, 0.6);  
 }
+app-main {
+  display: contents;
+}
 
 body {
   user-select: none;
@@ -104,8 +107,6 @@ body::-webkit-scrollbar {
 			
   }
 }  
-
-
 
 
 

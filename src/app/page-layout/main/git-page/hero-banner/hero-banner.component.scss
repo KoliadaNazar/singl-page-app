@@ -2,7 +2,7 @@
 @use 'mixins' as *;
 
 .hero-banner {
-  padding-top: 38px;
+  padding-top: 48px;
     @include laptop-min-width {
       padding-top: 54px;
     }
