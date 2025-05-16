@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   templateUrl: './registration-form.component.html',
   styleUrl: './registration-form.component.scss'
 })
-export class RegistrationFormComponent {
 
+
+export class RegistrationFormComponent {
+  closeModal() {
+    const modal = document.querySelector('.modal-overlay') as HTMLElement;
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  }
 }

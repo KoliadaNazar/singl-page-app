@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  onRegisterClick() {
+    const modal = document.querySelector('.modal-overlay') as HTMLElement;
+    if (modal) {
+      modal.style.display = 'block';
+    }
+  }
+
 
   toggleSidebar() {
     const sidebar = document.querySelector('.sidebar');
