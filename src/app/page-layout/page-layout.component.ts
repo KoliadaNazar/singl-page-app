@@ -3,6 +3,7 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
 
 @Component({
   selector: 'app-page-layout',
@@ -10,7 +11,8 @@ import { MainComponent } from './main/main.component';
     HeaderComponent,
     SidebarComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    RegistrationFormComponent
   ],
 
 

@@ -18,6 +18,16 @@ import { Router } from '@angular/router';
 
 
 export class AppComponent {
+
+  ngOnInit(): void {
+    const loader = document.getElementById('app-preloader');
+    if (loader) {
+      loader.classList.add('preloader--loaded');
+      setTimeout(() => loader.remove(), 500); // убрать из DOM
+    }
+  }
+
+
   title = 'singl-page-app';
 
   constructor(private router: Router) {

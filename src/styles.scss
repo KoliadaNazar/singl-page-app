@@ -1,5 +1,4 @@
 
-
 @use './assets/styles/media' as *;
 @use './assets/styles/mixins.scss' as *;
 @use './assets/styles/globals' as *;
@@ -9,4 +8,55 @@
 @use './assets/styles/buttons' as *;
 
 
+
+
+
+
+@use 'media' as *;
+@use 'mixins' as *;
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  @include background-snow-solid ;
+  z-index: 1000;
+}
+
+
+.preloader__inner {
+  @include flex-center;
+  height: 100%;
+}
+
+.preloader__circle {
+  position: relative;
+  animation: border-animation-360 0.6s ease-in-out infinite;
+  position: relative;
+	text-align: center;
+	color: var(--white);
+	background: var(--button-blue-border-gradient);
+	text-shadow: var(--button-text-shadow-blue);
+  box-shadow: var(--button-shadow--hover);
+	z-index:1;
+	width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.preloader__circle--bg {
+  border-radius: inherit;
+	position: absolute;
+	box-shadow: var(--button-background-shadow);
+	inset: 2px;
+	z-index: -1;
+  background: var(--button-blue-background--hover);
+}
+
+.preloadet__text {
+  font-size: 14px;
+  animation: scalePulse 2s ease-in-out infinite;
+  position: absolute;
+  left: 16px;
+  top: 44px;
+}
 

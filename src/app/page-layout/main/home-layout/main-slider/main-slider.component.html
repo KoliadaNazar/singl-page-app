@@ -1,4 +1,5 @@
-<section class="main-slider banner__container">
+<section class="main-slider banner__container" #sliderSection>
+
   <div class="slide  _active _fade banner--border">
     <div class="slide__content">
       <h1 class="slide__text">Welcome <br> to my personal <br> web page!</h1>
@@ -50,13 +51,13 @@
         </a>
     </div>
   </div>
-  <button class="arrow-previous controls" type="button" aria-label="previous slide">
+  <button class="arrow-previous controls" type="button" aria-label="previous slide" (click)="prevSlide()">
     <svg class="arrow-previous-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path fill="currentColor" d="M22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12M20,12A8,
             8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12M14,7L9,12L14,17V7Z" />
     </svg>
   </button>
-  <button class="arrow-next controls" type="button"  aria-label="next slide">
+  <button class="arrow-next controls" type="button"  aria-label="next slide" (click)="prevSlide()">
     <svg class="arrow-next-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path fill="currentColor" d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,
             12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" />

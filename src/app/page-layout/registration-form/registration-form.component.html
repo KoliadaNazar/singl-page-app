@@ -1,0 +1,72 @@
+<div class="modal-overlay" >
+			<div class="dialog">
+				<div class="dialog__header">
+					<h1 class="dialog__heading">Registration </h1>
+					<button class="button-close" id="closeForm" type="button"  aria-label="close form">
+						<svg class="button-close__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 16.74L7.76 12L3 7.26L7.26 3L12 7.76L16.74 3L21 7.26L16.24 12L21 16.74L16.74 21L12 16.24L7.26 21zm9-3.33l4.74 4.75l1.42-1.42L13.41 12l4.75-4.74l-1.42-1.42L12 10.59L7.26 5.84L5.84 7.26L10.59 12l-4.75 4.74l1.42 1.42z"/>
+						</svg>
+					</button>
+				</div>
+				<div class="dialog__body">
+					<div class="dialog__body-cell">
+						<label for="first-name" class="dialog__body-label">First name</label>
+						<input id="first-name" placeholder="Your Name" type="text" class="dialog__body-input">
+					</div> 
+					<div class="dialog__body-cell">
+						<label for="last-name" class="dialog__body-label">Last name</label>
+						<input id="last-name" placeholder="Your Last Name" type="text" class="dialog__body-input">
+					</div> 
+					<div class="dialog__body-cell">
+						<label for="date-birth" class="dialog__body-label">Date of your birht</label>
+						<input id="date-birth" type="date" class="dialog__body-input">
+					</div>
+					<div class="dialog__separator"><!--Separator--></div>
+					<div class="dialog__body-cell">
+						<div class="dialog__body-label">Gender</div>
+						<div class="dialog__body-radio-group">
+							<div class="dialog__body-radio-item">
+								<label for="gender-male" class="dialog__body-ragio-label">Male</label>
+								<input name="radio-btn" id="gender-male" class="dialog__body-ragio-input" type="radio">
+							</div>
+							<div class="dialog__body-radio-item">
+								<label for="gender-female" class="dialog__body-ragio-label">Female</label>
+								<input name="radio-btn" id="gender-female" class="dialog__body-ragio-input" type="radio">
+							</div>
+							<div class="dialog__body-radio-item">
+								<label for="gender-other" class="dialog__body-ragio-label">Other</label>
+								<input name="radio-btn" id="gender-other" class="dialog__body-ragio-input" type="radio">
+							</div>
+							</div>
+					</div>
+					<div class="dialog__body-cell">
+						<label for="Region" class="dialog__body-label">Region</label>
+						<select id="Region" class="dialog__body-select">
+							<option value="EU">Europe</option>
+							<option value="AS">Asia</option>
+							<option value="NA">North America</option>
+							<option value="SA">South America</option>
+							<option value="AF">Africa </option>
+							<option value="AU">Australia</option>
+						</select>
+					</div>
+					<div class="dialog__separator"><!--Separator--></div>
+					<div class="dialog__body-cell">
+						<label for="phone" class="dialog__body-label">Phone number</label>
+						<input id="phone" type="tel" class="dialog__body-input" placeholder="+">
+					</div>
+					<div class="dialog__body-cell">
+						<label for="email" class="dialog__body-label">E-mail</label>
+						<input id="email" type="email" class="dialog__body-input" placeholder="Your e-mail" >
+					</div>
+					<div class="dialog__body-cell">
+						<label for="register-password" class="dialog__body-label">Password</label>
+						<input id="register-password" type="password" class="dialog__body-input" placeholder="Create password" >
+					</div>
+				</div>
+				<div class="dialog-footer">
+					<button class="button button-medium-large" type="submit">Join Now
+						<span class="button-background button-secondary"></span>
+					</button>
+				</div>
+			</div>
+		</div>
