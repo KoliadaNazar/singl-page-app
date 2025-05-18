@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { HeroBannerComponent } from './hero-banner/hero-banner.component';
 import { GitRoleComponent } from './git-role/git-role.component';
 import { HeaderSubnavComponent } from './header-subnav/header-subnav.component';
 import { GitRepoBannerComponent } from './git-repo-banner/git-repo-banner.component';
 import { GitRepositoriesComponent } from './git-repositories/git-repositories.component';
 import { GitCommandsComponent } from './git-commands/git-commands.component';
-import { RouterOutlet, RouterLink } from '@angular/router';
+import { GitStagesComponent } from './git-stages/git-stages.component';
 
 
 
@@ -20,7 +21,8 @@ import { RouterOutlet, RouterLink } from '@angular/router';
     HeaderSubnavComponent,
     GitRepoBannerComponent,
     GitRepositoriesComponent,
-    GitCommandsComponent
+    GitCommandsComponent,
+    GitStagesComponent
   ],
   templateUrl: './git-page.component.html',
   styleUrl: './git-page.component.scss'
