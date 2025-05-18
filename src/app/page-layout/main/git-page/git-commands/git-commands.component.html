@@ -1,129 +1,123 @@
 <div class="hero-banner  banner__container" id="commands-git"> 
   <div class=" banner__inner banner--border ">
-    <div class="banner__text-wrap">
-      <h1 class="banner-heading">Basic Git Commands</h1>
-      <div class="article__separator"></div>
-      <div class="banner__code">
-        <pre>
-          <code class="language-git">
-      # Check installed Git version
-      git --version
-      
-      # Set user name and email globally
-      git config --global "user.name"
-      git config --global "user.email"
-      
-      # View current Git configuration
-      git config --list
-      
-      # Initialize a new Git repository
-      git init
-      
-      # Check repository status
-      git status
-      
-      # Track a specific file
-      git add "filename.txt"
-      
-      # Track all changes
-      git add .
-      
-      # Commit changes with a message
-      git commit -m "Initial commit"
-      
-      # Amend the last commit
-      git commit --amend
-      
-      # View commit history
-      git log
-      git log --oneline --graph --all
-      
-      # Connect to a remote repository
-      git remote add origin URL "https://git..."
-      
-      # Verify remote URL
-      git remote -v
-      
-      # Push local branch to remote
-            (first time)
-      git push -u origin main
-      
-      # Clone an existing remote repository
-      git clone URL "https://git..."
-      
-      # Pull latest changes from remote
-      git pull
-      
-      # Create and switch to a new branch
-      git checkout -b feature-branch
-      
-      # Switch to an existing branch
-      git checkout main
-      
-      # Rename current branch
-      git branch -m new-name
-      
-      # List all branches
-      git branch
-      
-      # Delete a local branch
-      git branch -d branch-name
-      
-      # Delete a remote branch
-      git push origin --delete branch-name
-      
-      # Merge another branch into current
-      git merge feature-branch
-      
-      # Rebase current branch into another
-      git rebase main
-      
-      # Abort an in-progress rebase
-      git rebase --abort
-      
-      # Continue rebase after conflict
-        resolution
-      git rebase --continue
-      
-      # Show what changed (unstaged)
-      git diff
-      
-      # Show staged changes
-      git diff --cached
-      
-      # Show difference from last commit
-      git diff HEAD
-      
-      # Reset index (unstage files)
-      git reset HEAD
-      
-      # Hard reset to a specific commit
-            (dangerous)
-      git reset --hard commit_hash
-      
-      # Temporarily save changes
-      git stash
-      
-      # List stashed changes
-      git stash list
-      
-      # Apply the most recent stash
-      git stash apply
-      
-      # Remove all stashes
-      git stash clear
-      
-      # Tag a commit
-      git tag v1.0
-      
-      # Push a tag to remote
-      git push origin v1.0
-          </code>
-        </pre>
-      </div>
-      
-
+    <h1 class="banner-heading">Git Commands</h1>
+    <div class="article__separator"></div>
+    <h2 class="banner-heading"> Basic  Commands</h2>
+    <div class="banner__code">
+      <code>
+        # Check installed Git version <br>
+        git --version <br>
+        <br>
+        # Set user name and email globally <br>
+        git config --global "user.name" <br>
+        git config --global "user.email" <br>
+        <br>
+        #Initializes a new Git repository <br>
+        git init <br>
+        <br>
+        #Clones a remote repository <br>
+        git clone URL <br>
+        <br>
+        #Shows the current state of the <br>
+        working directory and staging area <br>
+        git status <br>
+        <br>
+        #Adds all changes for the next commit <br>
+        git add . <br>
+        <br>
+        # Track a specific file <br>
+        git add "filename.txt" <br>
+        <br>
+        #Commits staged changes with message <br>
+        git commit -m "message" <br>
+        <br>
+        #Push local commits to remote branch <br>
+        git push origin "branch" <br>
+        <br>
+        #Fetches and merges changes from <br>
+        a remote branch (fetch + merge) <br>
+        git pull origin "branch" <br>
+        <br>
+        #Downloads changes from remote, <br>
+        but doesn’t apply them <br>
+        git fetch origin <br>
+      </code>
     </div>
+    <h2 class="banner-heading"> Branching & Merging</h2>
+    <div class="banner__code">
+      <code>
+      # Lists local branches <br>
+      git branch <br>
+        <br>
+      # Creates a new branch<br>
+      git branch "name"<br>
+        <br>
+      #Switches to the specified branch<br>
+      git checkout "branch"<br>
+        <br>
+      #Creates and switches to a new branch<br>
+      git checkout -b "branch"<br>
+        <br>
+      #Merges the specified branch<br>
+       into the current one<br>
+      git merge "branch"<br>
+        <br>
+      #Reapplies commits on top of<br>
+       another base branch (clean history)<br>
+      git rebase "branch"<br>
+        <br>
+      # Deletes a local branch<br>
+      git branch -d "name"<br>
+        <br>
+      #Deletes a remote branch<br>
+      git push origin --delete "name"<br>
+    </code>
   </div>
+  <h2 class="banner-heading"> Inspection & History</h2>
+    <div class="banner__code">
+      <code>
+        # Shows commit history <br>
+        git log <br>
+        <br>
+       #Compact version of commit history <br>
+        git log --oneline <br>
+        <br>
+        #Shows differences between working <br>
+         directory and last commit <br>
+         git diff <br>
+         <br>
+         # Shows difference between two commits <br>
+         git diff "commit1" "commit2" <br>
+         <br>
+        #Shows who modified each line <br>
+         in a file and when <br>
+        git blame "file" <br>
+      </code>
+    </div>
+    <h2 class="banner-heading"> Fixing Mistakes & Stashing</h2>
+    <div class="banner__code">
+      <code>
+        # Temporarily stores uncommitted changes <br>
+        git stash <br>
+         <br>
+        #Restores stashed changes <br>
+         git stash apply <br>
+         <br>
+        #Uncommits the last commit, keeps changes<br>
+        in filedirectory and last commit <br>
+        git reset HEAD~1git reset HEAD~1 <br>
+          <br>
+        #Discards changes in a specific file <br>
+        git checkout -- "file" <br>
+          <br>
+        #Removes untracked files <br>
+        git clean -f <br>
+          <br>
+        #Shows a log of all Git actions <br>
+        git reflog 
+      </code>
+    </div>
+    
+    </div>
 </div>
 

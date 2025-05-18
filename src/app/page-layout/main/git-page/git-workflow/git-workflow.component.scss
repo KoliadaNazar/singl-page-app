@@ -9,7 +9,7 @@
   
     @include tablet-min-width {
       padding: 32px 96px;
-      grid-row-gap: 50px;
+      grid-row-gap: 30px;
     }
 }
 
@@ -45,6 +45,7 @@
 }
 
 .article__cell {
+  padding-top: 10px;
   position: relative;
 }
 

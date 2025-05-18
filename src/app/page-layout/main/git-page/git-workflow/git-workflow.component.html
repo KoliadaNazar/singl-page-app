@@ -1,11 +1,11 @@
 
-<div class="container article" id="git-bennefits">
+<div class="container article" id="git-workflow">
   <div class="container--border article__inner">
     <h2 class="article__heading">Git general workflow</h2>
     <h3 class="article__heading">When working with Git in a team,
          following a structured workflow ensures smooth collaboration and code consistency.
     </h3>
-    <div class="article__cell">
+    <div class="article__cell"  id="git-clone">
       <h3 class="article_list-heading">1.Clone the Repository (Only Once) </h3>
       <ul class="article__list">
         <li class="article__list-item">
@@ -22,7 +22,7 @@
       </ul>
     </div>
 
-    <div class="article__cell">
+    <div class="article__cell" id="git-fetch">
       <h3 class="article_list-heading">2.Fetch and Update Your Local Branches</h3>
       <ul class="article__list">
         <li class="article__list-item">  Before starting any new task, always ensure
@@ -37,7 +37,7 @@
       </ul>
     </div>
 
-    <div class="article__cell">
+    <div class="article__cell" id="git-checkout">
       <h3 class="article_list-heading">3.Switch between branches</h3>
       <p class="article__cell-paragraph article--warning">WARNING! If there are unsaved changes in the
            working directory,Git will not let you switch (you need to commit or discard them).
@@ -53,7 +53,7 @@
       </ul>
     </div>
 
-     <div class="article__cell">
+     <div class="article__cell" id="git-pull">
       <h3 class="article_list-heading">4.Update Your Local Repository.
       </h3>
        <p class="article__cell-paragraph"><code>#git pull</code> used to update your local branch with the latest
@@ -69,7 +69,7 @@
       </ul>
     </div>
   
-    <div class="article__cell">
+    <div class="article__cell" id="gid-branch">
       <h3 class="article_list-heading">5.Create a branch and name it based on its
          purpose — such as feature, hotfix, or bugfix.
       </h3>
@@ -83,10 +83,11 @@
         <li class="article__list-item">Use <code>#git checkout -b branch-name</code> to both create and
            immediately switch to the new branch.
         </li>
+        <li class="article__list-item">Enter <code>#git branch</code> to check current branch</li>
       </ul>
     </div>
 
-    <div class="article__cell">
+    <div class="article__cell" id="git-add">
       <h3 class="article_list-heading">6.Stage changes</h3>
       <p class="article__cell-paragraph"> After you make changes in code - add them to Index.
       </p>
@@ -100,7 +101,7 @@
       </ul>
     </div>
 
-    <div class="article__cell">
+    <div class="article__cell" id="git-commit">
       <h3 class="article_list-heading">7.Commit the changes</h3>
       <p class="article__cell-paragraph"> The git commit command is used to save your 
         staged changes to the local Git repository. Here's what it does:
@@ -118,7 +119,7 @@
       </ul>
     </div>
     
-    <div class="article__cell">
+    <div class="article__cell" id="git-push">
       <h3 class="article_list-heading">8.Push your changes to the remote repository.</h3>
       <p class="article__cell-paragraph article--warning">
         Before pushing changes to a remote repository follow these critical checks to avoid mistakes:
@@ -137,7 +138,7 @@
       </ul>
     </div>
 
-     <div class="article__cell">
+     <div class="article__cell" id="git-merge">
       <h3 class="article_list-heading">8.Open a Pull Request (PR)</h3>
       <p class="article__cell-paragraph">
         Go to your Git platform (GitHub, GitLab, Bitbucket, etc.) 

@@ -8,34 +8,25 @@
   padding:  24px 16px;
   background: var(--white);
   @include background-snow;
+  grid-row-gap: 20px;
+  display: grid;
+
+    @include tablet-min-width {
+    justify-items: center;
+    }
 }
 
-.banner-heading {
-  text-align: center;
-}
-.banner__text-wrap {
-  display: grid;
-  grid-row-gap: 10px;
-}
 
 .banner__code{
-  margin-left: -50px;
-  @include tablet-min-width {
-    margin-left: 0;
+  min-width: 300px;
+  border-radius: 30px;
+  background: white;
+  padding: 10px;
+  @include mobile-min-width {
+    font-size: 16px;
+    padding: 40px;
   }
 }
-
-code {
-  padding: 0;
-  font-size: 12px;
-    @include mobile-min-width {
-      font-size: 14px;
-    }
-    @include tablet-min-width {
-      font-size: 16px;
-    }
-}
-
 
 .article__separator {
   width: 100%;
