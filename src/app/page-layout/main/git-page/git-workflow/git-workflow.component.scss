@@ -4,20 +4,29 @@
 .article__inner {
   padding: 12px;
   background: var(--white);
-  justify-items: center;
   display: grid;
-  grid-row-gap: 16px;
+  grid-row-gap: 18px;
   
     @include tablet-min-width {
       padding: 32px 96px;
+      grid-row-gap: 24px;
     }
 }
 
+.article__heading {
+  text-align: center;
+}
 
 .article__separator {
-  width: 100%;
+   background: var(--blue-horisonal-stylish-separator);
   height: 1px;
   background: var(--blue-horisonal-stylish-separator);
+}
+
+.cell__separator {
+  height: 1px;
+  border-radius: 20px;
+   background: var(--gray-light);
 }
 
 .article__content {
@@ -26,16 +35,25 @@
   }
 }
 
+.article__cell-paragraph {
+  padding: 10px 0 0px 20px;
+}
+
 .article__list-item {
+  margin-inline-start: 34px;
   padding-top: 8px;
   list-style-type: disc;
+}
+
+.article--warning {
+  color: rgb(255, 30, 0);
+  font-weight: 600;
 }
 
 .article__container-img {
  height: 450px;
 width: 300px;
 }
-
 
 code{
   font-size: 18px;

@@ -1,0 +1,136 @@
+
+<div class="container article" id="git-bennefits">
+  <div class="container--border article__inner">
+    <h2 class="article__heading">Git general workflow</h2>
+    <div class="article__separator"></div>
+    <h3 class="article__heading">When working with Git in a team,
+         following a structured workflow ensures smooth collaboration and code consistency.
+    </h3>
+    
+    <div class="article__cell">
+      <h3 class="article_list-heading">1.Clone the Repository (Only Once) </h3>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <code>#git clone</code> downloads the full history of the project, including all branches and commits.
+        </li>
+        <li class="article__list-item">  If it's your first time working with the project ,
+           start by cloning the remote repository to your local machine using command: <br>
+           <code>#git clone</code> http adress or SSH key
+        </li>
+        <li class="article__list-item">
+           Then change directory <code>~cd folder_name</code>   <br>
+           (You can also check your current branch using <code>#git branch</code>)
+        </li>
+      </ul>
+    </div>
+
+     <div class="cell__separator"></div>
+
+    <div class="article__cell">
+      <h3 class="article_list-heading">2.Fetch and Update Your Local Branches</h3>
+      <ul class="article__list">
+        <li class="article__list-item">  Before starting any new task, always ensure
+           your local branches are up-to-date with the remote repository.
+        </li>
+        <li class="article__list-item">
+           <code>#git fetch </code>downloads changes but does not apply them automatically — it's
+            safe to use anytime. <br>
+           (Independent of the current branch - it downloads all changes
+           from the remote repository across all branches, but does not merge them with the local ones.)
+        </li>
+      </ul>
+    </div>
+
+     <div class="cell__separator"></div>
+
+    <div class="article__cell">
+      <h3 class="article_list-heading">3.Switch between branches</h3>
+      <p class="article__cell-paragraph article--warning">WARNING! If there are unsaved changes in the
+           working directory,Git will not let you switch (you need to commit or discard them).
+      </p>
+      <p class="article__cell-paragraph" >You can switch between branches using <code>#git checkout</code></p>
+      <ul class="article__list">
+        <li class="article__list-item">
+            <code>#git checkout main</code> switch to the main branch <br>
+        </li>
+        <li class="article__list-item">
+          <code>#git checkout feature/auth</code>switch to the feature/auth branch
+        </li>
+      </ul>
+    </div>
+
+    <div class="cell__separator"></div>
+
+     <div class="article__cell">
+      <h3 class="article_list-heading">4.Update Your Local Repository.
+      </h3>
+       <p class="article__cell-paragraph"><code>#git pull</code> used to update your local branch with the latest
+         changes from a remote repository. It combines two actions in one:
+      </p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <code>fetch</code> – downloads new commits and data from the remote branch.
+        </li>
+        <li class="article__list-item">
+          <code>merge</code> – automatically merges the remote changes into your current branch.
+        </li>
+      </ul>
+    </div>
+    
+     <div class="cell__separator"></div>
+
+    <div class="article__cell">
+      <h3 class="article_list-heading">5.Create a branch and name it based on its
+         purpose — such as feature, hotfix, or bugfix.
+      </h3>
+      <p class="article__cell-paragraph article--warning">Always work in a separate branch when developing
+         new features or fixing bugs! You can use two ways of creating a new branch:
+      </p>
+      <ul class="article__list">
+         <li class="article__list-item"> First run <code>#git branch branch-name</code> 
+          to create the branch, then <code>#git checkout branch-name</code> to switch to it.
+        </li>
+        <li class="article__list-item">Use <code>#git checkout -b branch-name</code> to both create and
+           immediately switch to the new branch.
+        </li>
+      </ul>
+    </div>
+
+    <div class="cell__separator"></div>
+
+    <div class="article__cell">
+      <h3 class="article_list-heading">6.Stage changes</h3>
+      <p class="article__cell-paragraph"> After you make changes in code - add them to Index.
+      </p>
+      <ul class="article__list">
+         <li class="article__list-item"> <code>#git add .</code> stages all new and modified
+           files in the current directory and subdirectories for the next commit.
+        </li>
+        <li class="article__list-item"> <code>#git add index.html</code> will add to stage
+         only index.html file.
+        </li>
+      </ul>
+    </div>
+
+    <div class="cell__separator"></div>
+
+    <div class="article__cell">
+      <h3 class="article_list-heading">7.Commit the changes</h3>
+      <p class="article__cell-paragraph"> The git commit command is used to save your 
+        staged changes to the local Git repository. Here's what it does:
+      </p>
+      <ul class="article__list">
+         <li class="article__list-item"><code>#git commit -m "commit description here"</code>
+          takes all changes that have been staged
+        </li>
+        <li class="article__list-item">Creates a new commit object with these changes</li>
+        <li class="article__list-item">Records your name, email,
+           the current date/time, and your commit message
+        </li>
+        <li class="article__list-item">Updates the current branch's reference to point to the new commit.
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>

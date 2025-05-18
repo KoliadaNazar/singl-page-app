@@ -7,7 +7,7 @@ import { GitRepoBannerComponent } from './git-repo-banner/git-repo-banner.compon
 import { GitRepositoriesComponent } from './git-repositories/git-repositories.component';
 import { GitCommandsComponent } from './git-commands/git-commands.component';
 import { GitStagesComponent } from './git-stages/git-stages.component';
-
+import { GitWorkflowComponent } from './git-workflow/git-workflow.component';
 
 
 
@@ -22,7 +22,8 @@ import { GitStagesComponent } from './git-stages/git-stages.component';
     GitRepoBannerComponent,
     GitRepositoriesComponent,
     GitCommandsComponent,
-    GitStagesComponent
+    GitStagesComponent,
+    GitWorkflowComponent
   ],
   templateUrl: './git-page.component.html',
   styleUrl: './git-page.component.scss'
