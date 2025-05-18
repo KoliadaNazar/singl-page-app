@@ -48,8 +48,8 @@
 
 .banner__light-switcher {
 	margin: 0 auto;
-	
 }
+
 .switcher-icon__hidden {
 	display: none;
 }
@@ -57,7 +57,7 @@
 .switcher-on,
 .switcher-off,
 .banner__light-bulb-icon {
-	color:rgb(113, 114, 117);
+	color:var(--gray-light);
 }
 
 .banner__light-bulb-icon {

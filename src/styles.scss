@@ -15,6 +15,12 @@
 @use 'media' as *;
 @use 'mixins' as *;
 
+
+.no-scroll {
+  overflow: hidden;
+}
+
+
 .preloader {
   position: fixed;
   inset: 0;

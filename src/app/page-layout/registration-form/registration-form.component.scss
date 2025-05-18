@@ -2,10 +2,6 @@
 @use 'mixins' as *;
 
 
-body.no-scroll {
-  overflow: hidden;
-}
-
 .modal-overlay {
   display: none;
   position: fixed;

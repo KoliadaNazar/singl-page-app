@@ -13,6 +13,7 @@ export class RegistrationFormComponent {
     const modal = document.querySelector('.modal-overlay') as HTMLElement;
     if (modal) {
       modal.style.display = 'none';
+      document.body.classList.remove('no-scroll');
     }
   }
 }
