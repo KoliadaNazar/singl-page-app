@@ -136,11 +136,12 @@
 
     <div class="article__cell">
       <h3 class="article_list-heading">8.Push your changes to the remote repository.</h3>
-      <p class="article__cell-paragraph"> 
+      <p class="article__cell-paragraph article--warning">
+        Before pushing changes to a remote repository follow these critical checks to avoid mistakes:
       </p>
       <ul class="article__list">
-         <li class="article__list-item"><code>#git commit -m "commit description here"</code>
-          takes all changes that have been staged
+         <li class="article__list-item article--warning"><code>#git status</code>
+          shows the current state of your working directory and staging area.
         </li>
         <li class="article__list-item">Creates a new commit object with these changes</li>
         <li class="article__list-item">Records your name, email,
