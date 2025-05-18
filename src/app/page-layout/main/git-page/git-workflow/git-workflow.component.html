@@ -2,11 +2,9 @@
 <div class="container article" id="git-bennefits">
   <div class="container--border article__inner">
     <h2 class="article__heading">Git general workflow</h2>
-    <div class="article__separator"></div>
     <h3 class="article__heading">When working with Git in a team,
          following a structured workflow ensures smooth collaboration and code consistency.
     </h3>
-    
     <div class="article__cell">
       <h3 class="article_list-heading">1.Clone the Repository (Only Once) </h3>
       <ul class="article__list">
@@ -24,8 +22,6 @@
       </ul>
     </div>
 
-     <div class="cell__separator"></div>
-
     <div class="article__cell">
       <h3 class="article_list-heading">2.Fetch and Update Your Local Branches</h3>
       <ul class="article__list">
@@ -40,8 +36,6 @@
         </li>
       </ul>
     </div>
-
-     <div class="cell__separator"></div>
 
     <div class="article__cell">
       <h3 class="article_list-heading">3.Switch between branches</h3>
@@ -59,8 +53,6 @@
       </ul>
     </div>
 
-    <div class="cell__separator"></div>
-
      <div class="article__cell">
       <h3 class="article_list-heading">4.Update Your Local Repository.
       </h3>
@@ -76,9 +68,7 @@
         </li>
       </ul>
     </div>
-    
-     <div class="cell__separator"></div>
-
+  
     <div class="article__cell">
       <h3 class="article_list-heading">5.Create a branch and name it based on its
          purpose — such as feature, hotfix, or bugfix.
@@ -96,8 +86,6 @@
       </ul>
     </div>
 
-    <div class="cell__separator"></div>
-
     <div class="article__cell">
       <h3 class="article_list-heading">6.Stage changes</h3>
       <p class="article__cell-paragraph"> After you make changes in code - add them to Index.
@@ -111,8 +99,6 @@
         </li>
       </ul>
     </div>
-
-    <div class="cell__separator"></div>
 
     <div class="article__cell">
       <h3 class="article_list-heading">7.Commit the changes</h3>
@@ -131,9 +117,7 @@
         </li>
       </ul>
     </div>
-
-    <div class="cell__separator"></div>
-
+    
     <div class="article__cell">
       <h3 class="article_list-heading">8.Push your changes to the remote repository.</h3>
       <p class="article__cell-paragraph article--warning">
@@ -143,12 +127,52 @@
          <li class="article__list-item article--warning"><code>#git status</code>
           shows the current state of your working directory and staging area.
         </li>
-        <li class="article__list-item">Creates a new commit object with these changes</li>
-        <li class="article__list-item">Records your name, email,
-           the current date/time, and your commit message
+         <li class="article__list-item article--warning"><code>#git log --oneline</code>
+                                          compact commit history <br>
+          <code>#git log --p</code> detailed log with changes
         </li>
-        <li class="article__list-item">Updates the current branch's reference to point to the new commit.
+        <li class="article__list-item"><code>#git push origin branch/name</code> push it to remote
+          (Origin - is the name of the he remote repository by default)
         </li>
+      </ul>
+    </div>
+
+     <div class="article__cell">
+      <h3 class="article_list-heading">8.Open a Pull Request (PR)</h3>
+      <p class="article__cell-paragraph">
+        Go to your Git platform (GitHub, GitLab, Bitbucket, etc.) 
+        and create a Pull Request (also known as Merge Request). Select:
+      </p>
+      <ul class="article__list">
+         <li class="article__list-item">Base branch: usually main</li>
+         <li class="article__list-item">Compare branch: your new branch
+           (feature/login-fix) Add reviewers, describe your changes, and wait for feedback.
+        </li>
+      </ul>
+    </div>
+
+    <div class="article__cell">
+      <h3 class="article_list-heading">9.Review & Update (if needed)</h3>
+      <p class="article__cell-paragraph">If there are suggestions or issues:</p>
+      <ul class="article__list">
+         <li class="article__list-item">Make changes locally</li>
+         <li class="article__list-item">Stage and commit again</li>
+          <li class="article__list-item">Push updates: <code> <br>
+            git add . <br>
+            git commit -m "Update based on PR review" <br>
+            git push origin feature/login-fix</code>
+          </li>
+      </ul>
+    </div>
+    
+    <div class="article__cell">
+      <h3 class="article_list-heading">10.Merge the Pull Request</h3>
+      <p class="article__cell-paragraph">After approval, merge the PR using the Git UI.</p>
+      <ul class="article__list">
+         <li class="article__list-item">Then delete the local or remotely feature branch if no longer needed <br>
+           <code>git push origin --delete branch/name</code> <br>
+           <code>git branch -d branch/name</code>
+          </li>
       </ul>
     </div>
 
