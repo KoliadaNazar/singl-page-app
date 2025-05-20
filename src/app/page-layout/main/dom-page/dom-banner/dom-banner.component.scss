@@ -1,0 +1,22 @@
+
+@use 'media' as *;
+@use 'mixins' as *;
+
+.info-banner {
+    @include laptop-min-width {
+      padding-top: 20px;
+    }
+}
+
+.banner__inner {
+  min-height: 150px;
+  padding:  16px;
+  background: var(--white);
+  @include background-snow;
+  text-align: center;
+}
+
+.banner__text-wrap {
+  display: grid;
+  grid-row-gap: 10px;
+}
