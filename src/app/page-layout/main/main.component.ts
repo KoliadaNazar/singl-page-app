@@ -3,6 +3,8 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
 import { GitPageComponent } from './git-page/git-page.component';
+import { DomPageComponent } from './dom-page/dom-page.component';
+import { BrowserComponent  } from './browser/browser.component';
 
 
 @Component({
@@ -10,7 +12,9 @@ import { GitPageComponent } from './git-page/git-page.component';
   imports: [
     RouterOutlet, RouterLink,
     HomeLayoutComponent,
-    GitPageComponent
+    GitPageComponent,
+    DomPageComponent,
+    BrowserComponent 
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
