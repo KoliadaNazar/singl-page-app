@@ -1,0 +1,71 @@
+
+<div class="container article" >
+  <div class="container--border article__inner">
+    <h2 class="article__heading">Understanding the Page Load Process:br <br>
+                                How a Web Page Appears in Your Browser
+    </h2>
+   
+    <div class="article__cell"  >
+      <h3 class="article_list-heading">Step 0. <br> URL Validation in the Browser Address Bar</h3>
+      <p class="article__cell-paragraph">
+        Before processing a URL, browsers perform quick validation:
+      </p>
+      <ul class="article__list">
+        <li class="article__list-item">Check if input is a valid URL – If it starts with
+           http://, https://, or a domain format, treat as a URL.
+        </li>
+        <li class="article__list-item article--warning">If not, treat as a search query
+           – Pass the text to the default search engine.
+        </li>
+        <li class="article__list-item"> Auto-Correction – Adds https://, fixes typos
+           (e.g., "gogle.com" → "google.com").
+        </li>
+        <li class="article__list-item">
+           Security Checks – Blocks known phishing/malware sites and warns about unsafe HTTP.
+        </li>
+      </ul>
+    </div>
+
+    <div class="article__cell"  >
+      <h3 class="article_list-heading">1. DNS Resolution</h3>
+      <p class="article__cell-paragraph">
+        The first step is resolving the domain name in the URL (like example.com)
+         into an IP address. This is done through a Domain Name System (DNS) lookup.
+          Your browser asks a DNS server to translate the human-readable
+           domain into a machine-readable IP address.
+      </p>
+    </div>
+
+    <div class="article__cell"  >
+      <h3 class="article_list-heading">2. Establishing a Connection</h3>
+      <p class="article__cell-paragraph">
+        Once the IP address is known, your browser establishes a network connection
+         with the web server. Typically, this involves setting up a TCP connection,
+          and if the site uses HTTPS, a TLS handshake follows to secure the connection.
+      </p>
+    </div>
+
+    <div class="article__cell"  >
+      <h3 class="article_list-heading">3. Sending the HTTP Request</h3>
+      <p class="article__cell-paragraph">
+       With the connection established, your browser sends an HTTP request to the server
+        asking for the specific resource (usually an HTML document). This request
+         includes headers that provide additional context, such as the browser
+          type and accepteonnection.
+      </p>
+    </div>
+
+     <div class="article__cell"  >
+      <h3 class="article_list-heading">4. Server Response and Resource Download</h3>
+      <p class="article__cell-paragraph">
+       The server processes the request and sends back an HTTP response containing
+        the HTML content and response headers. Upon receiving the HTML, the browser
+         begins downloading it. However, the HTML often references other resources
+          like CSS files, JavaScript files, images, and fonts. The browser sends additional
+           HTTP requests to fetch all these assets in parallel to build the full page.
+      </p>
+    </div>
+    
+
+  </div>
+</div>
