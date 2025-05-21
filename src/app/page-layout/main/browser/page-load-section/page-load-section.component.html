@@ -1,14 +1,43 @@
 
 <div class="container article" >
   <div class="container--border article__inner">
-    <h2 class="article__heading">Understanding the Page Load Process:br <br>
+    <h2 class="article__heading">Understanding the Page Load Process or <br> <br>
                                 How a Web Page Appears in Your Browser
     </h2>
-   
-    <div class="article__cell"  >
-      <h3 class="article_list-heading">Step 0. <br> URL Validation in the Browser Address Bar</h3>
+
+     <div class="article__cell"  >
+      <h3 class="article_list-heading">What Is a URL and What Are Its Parts?</h3>
       <p class="article__cell-paragraph">
-        Before processing a URL, browsers perform quick validation:
+        A URL (Uniform Resource Locator) is the address used to access resources on
+         the internet. Each part of a URL has a specific role.
+      </p>
+      <ul class="article__list">
+        <li class="article__list-item">Scheme (Protocol) defines how the resource is accessed.
+           Common examples include http://, https://, and ftp://.
+        <li class="article__list-item">Domain Name or IP Address.
+          This specifies the server where the resource is located.
+           For example: example.com or 192.168.1.1.
+        </li>
+        <li class="article__list-item"> Port (Optional). Indicates the port number if it
+         differs from the default. For instance, :443 for HTTPS or :8080 for custom ports.
+        </li>
+        <li class="article__list-item">Path to the resource  — shows the file
+           or page location on the server: /about/team
+        </li>
+        <li class="article__list-item">Query Parameters. These start with a question
+           mark ? and provide additional data in key-value pairs, like ?page=2&sort=asc.
+        </li>
+         <li class="article__list-item">Fragment (Anchor).
+           Begins with a hash # and links to a specific part of the page, like #section1.
+        </li>
+      </ul>
+    </div>
+    
+    <div class="article__cell"  >
+      <h3 class="article_list-heading">Step 0. <br> URL Input and Parsing</h3>
+      <p class="article__cell-paragraph">
+        When a user enters a URL into the browser’s address bar, the browser
+         quickly validates and processes the URL.
       </p>
       <ul class="article__list">
         <li class="article__list-item">Check if input is a valid URL – If it starts with
@@ -27,7 +56,7 @@
     </div>
 
     <div class="article__cell"  >
-      <h3 class="article_list-heading">1. DNS Resolution</h3>
+      <h3 class="article_list-heading">1. DNS Lookup (Domain Name Resolution)</h3>
       <p class="article__cell-paragraph">
         The first step is resolving the domain name in the URL (like example.com)
          into an IP address. This is done through a Domain Name System (DNS) lookup.
@@ -37,35 +66,238 @@
     </div>
 
     <div class="article__cell"  >
-      <h3 class="article_list-heading">2. Establishing a Connection</h3>
+      <h3 class="article_list-heading">2. Starting connection</h3>
       <p class="article__cell-paragraph">
-        Once the IP address is known, your browser establishes a network connection
-         with the web server. Typically, this involves setting up a TCP connection,
-          and if the site uses HTTPS, a TLS handshake follows to secure the connection.
+       Before connecting to the server, the browser must resolve the domain name to an IP address:
+      </p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          Browser Cache Check – The browser checks if the domain was recently resolved.
+        </li>
+        <li class="article__list-item ">
+          OS Cache Check – If not found, the OS checks its DNS cache.
+        </li>
+        <li class="article__list-item"> 
+          Router Cache Check – The local network router may have cached DNS records.
+        </li>
+        <li class="article__list-item">
+          ISP’s DNS Server – If no cache exists, a DNS query is sent to the ISP’s DNS resolver.
+        </li>
+        <li class="article__list-item">
+         Recursive DNS Query – If the ISP doesn’t have the record, it queries root DNS servers
+          → TLD (.com, .org) → authoritative DNS servers.
+        </li>
+      </ul>
+      <p class="article__cell-paragraph">
+       Once resolved, the browser receives the IP address (e.g., 93.184.216.34 for example.com).
       </p>
     </div>
 
     <div class="article__cell"  >
-      <h3 class="article_list-heading">3. Sending the HTTP Request</h3>
+      <h3 class="article_list-heading">3. Establishing a TCP Connection</h3>
       <p class="article__cell-paragraph">
-       With the connection established, your browser sends an HTTP request to the server
-        asking for the specific resource (usually an HTML document). This request
-         includes headers that provide additional context, such as the browser
-          type and accepteonnection.
+       The browser initiates a connection to the server using the
+        Transmission Control Protocol (TCP).TCP 3-Way Handshake:
       </p>
+      <ul  class="article__list">
+        <li class="article__list-item">
+           SYN – Browser sends a synchronization packet to the server.
+        </li>
+        <li class="article__list-item ">
+         SYN-ACK – Server acknowledges and responds.
+        </li>
+        <li class="article__list-item"> 
+          ACK – Browser confirms, establishing the connection.
+        </li>
+      </ul>
+      <p class="article__cell-paragraph">
+       TLS Handshake (for HTTPS).If the site uses HTTPS, an additional TLS handshake occurs:
+      </p>
+      <ul  class="article__list">
+        <li class="article__list-item">
+           ClientHello – Browser sends supported encryption methods.
+        </li>
+        <li class="article__list-item ">
+         ServerHello – Server selects a cipher suite and sends its SSL certificate.
+        </li>
+        <li class="article__list-item"> 
+          Key Exchange – Browser verifies the certificate and generates a session key.
+        </li>
+        <li class="article__list-item"> 
+          Encrypted Communication – All further data is encrypted.
+        </li>
+      </ul>
     </div>
 
      <div class="article__cell"  >
-      <h3 class="article_list-heading">4. Server Response and Resource Download</h3>
+      <h3 class="article_list-heading">4. HTTP Request and Response</h3>
       <p class="article__cell-paragraph">
-       The server processes the request and sends back an HTTP response containing
-        the HTML content and response headers. Upon receiving the HTML, the browser
-         begins downloading it. However, the HTML often references other resources
-          like CSS files, JavaScript files, images, and fonts. The browser sends additional
-           HTTP requests to fetch all these assets in parallel to build the full page.
+       Once connected, the browser sends an HTTP request to fetch the webpage:
       </p>
+      <p class="article__cell-paragraph article--warning">
+       The most request methods: 
+      </p>
+      <ol  class="article__list-ordered article--warning">
+        <li class="article__list-ordered">
+           GET - Retrieve data from a server (read-only).
+        </li>
+        <li class="article__list-ordered "> 
+          POST - Send data to the server (usually to create a resource).
+        </li>
+        <li class="article__list-ordered "> 
+          PUT - Update an existing resource (full replacement).
+        </li>
+        <li class="article__list-ordered "> 
+          PATCH - Partially update a resource (only send modified fields).
+        </li>
+        <li class="article__list-ordered "> 
+          DELETE - Remove a resource. (Deleting a blog post.)
+        </li>
+        <li class="article__list-ordered "> 
+          HEAD - Retrieve only response headers (no body).
+        </li>
+      </ol>
+
+      <ul  class="article__list">
+        <li class="article__list-item">
+           Request Headers <br>
+           <code>
+              GET /index.html HTTP/1.1 <br>
+              Host: example.com <br>
+              User-Agent: Mozilla/5.0 <br>
+              Accept: text/html,
+              application/xhtml+xml <br>
+              Connection: keep-alive <br>
+            </code>
+        </li>
+        <li class="article__list-item "> Server Processing. The server processes the
+           request (e.g., executes backend code, queries databases) and generates a response.
+        </li>
+        <li class="article__list-item"> 
+          Response Headers & Body
+          <code>
+              HTTP/1.1 200 OK <br>
+              Content-Type: text/html; charset=UTF-8 <br>
+              Cache-Control: max-age=3600 <br>
+              &lt;!DOCTYPE html&gt; <br>
+               &lt;html&gt;... &lt;/html&gt; <br>
+            </code>
+        </li>
+      </ul>
     </div>
     
+    <div class="article__cell"  >
+      <h3 class="article_list-heading"> HTTP Status Codes</h3>
+       <ol  class="article__list-ordered ">
+        <li class="article__list-ordered">
+           2xx Success <br>
+           200 OK – Good <br>
+        </li>
+        <li class="article__list-ordered "> 
+          3xx Redirect <br>
+          301 – Moved forever <br>
+          302 – Moved temp
+        </li>
+        <li class="article__list-ordered "> 
+          4xx You messed up <br>
+          400 – Bad request <br>
+          403 – No access <br>
+          404 Not Found – Page gone <br>
+          429 – Too many requests br
+        </li>
+        <li class="article__list-ordered "> 
+           5xx Server failed <br>
+           500 Error – Server broke <br>
+           502 – Bad gateway <br>
+           503 – Overloaded
+        </li>
+        <li class="article__list-ordered "> 
+          DELETE - Remove a resource. (Deleting a blog post.)
+        </li>
+        <li class="article__list-ordered "> 
+          HEAD - Retrieve only response headers (no body).
+        </li>
+      </ol>
+    </div>
+
+    <div class="article__cell"  >
+      <h3 class="article_list-heading">5. Parsing and Rendering the Page</h3>
+      <p class="article__cell-paragraph">
+       After receiving the HTML, the browser begins rendering:
+      </p>
+      <ul class="article__list">
+        <li class="article__list-item"> A. HTML Parsing & DOM Construction. <br>The browser
+           parses HTML line by line, building the Document Object Model (DOM) tree. <br>
+          If it encounters script, parsing pauses until the script is downloaded
+           and executed (unless async/defer is used).
+        </li>
+        <li class="article__list-item ">B. CSSOM Construction. <br>
+          External CSS files are fetched and parsed into the CSS Object Model (CSSOM). <br>
+          CSS rules are applied to the DOM to compute styles.
+        </li>
+        <li class="article__list-item">C. Render Tree Formation. <br>
+          The DOM and CSSOM are combined into a Render Tree,
+           which excludes non-visible elements (e.g., display: none).
+        </li>
+        <li class="article__list-item">D. Layout (Reflow) <br>
+          The browser calculates the exact position and size of each element (a process called layout or reflow).
+        </li>
+        <li class="article__list-item">E. Painting <br>
+          The browser converts the render tree into pixels on the screen (painting). <br>
+          Modern browsers use GPU acceleration for smoother rendering.
+        </li>
+        <li class="article__list-item">F. JavaScript Execution <br>
+          Scripts can modify the DOM/CSSOM, triggering reflows and repaints. <br>
+          Event loop manages asynchronous tasks (e.g., fetch(), setTimeout)
+        </li>
+      </ul>
+    </div>
+
+    <div class="article__cell"  >
+      <h3 class="article_list-heading">6. Additional Resource Loading</h3>
+      <p class="article__cell-paragraph">
+      After the initial render, the browser may load:
+      </p>
+      <ul class="article__list">
+        <li class="article__list-item">
+          Images, Videos, Fonts – Fetched asynchronously.
+        </li>
+        <li class="article__list-item ">
+          AJAX/Fetch Requests – Dynamic content loaded via JavaScript.
+        </li>
+        <li class="article__list-item">
+          Lazy-Loaded Elements – Deferred until needed (e.g., images below the fold).
+        </li>
+      </ul>
+      <p class="article__cell-paragraph">
+       Once resolved, the browser receives the IP address (e.g., 93.184.216.34 for example.com).
+      </p>
+    </div>
+
+    <div class="article__cell"  >
+      <h3 class="article_list-heading">7. Final Page Load and Interactive State</h3>
+      <ul class="article__list">
+        <li class="article__list-item">
+          DOMContentLoaded – Fires when the DOM is fully parsed (no styles/images required).
+        </li>
+        <li class="article__list-item ">
+          load Event – Triggers when all resources (images, scripts) are loaded.
+        </li>
+        <li class="article__list-item">
+          First Contentful Paint (FCP) – When the first text/image appears.
+        </li>
+      </ul>
+      <p class="article__cell-paragraph">
+       Time to Interactive (TTI) – When the page is fully responsive.
+      </p>
+    </div>
+
+      <h3 class="article__heading ">Conclusion</h3>
+       <p class="article__cell-paragraph">
+       The page load process involves DNS resolution, TCP/TLS negotiation, HTTP requests,
+        DOM/CSSOM construction, rendering, and script execution. Understanding each step
+         helps developers optimize performance and deliver faster, smoother user experiences.
+      </p>
 
   </div>
 </div>
