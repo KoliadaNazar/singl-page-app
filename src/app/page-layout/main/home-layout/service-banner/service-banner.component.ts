@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-service-banner',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './service-banner.component.html',
   styleUrl: './service-banner.component.scss'
 })
