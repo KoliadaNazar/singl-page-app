@@ -33,4 +33,14 @@ export class AppComponent {
   constructor(private router: Router) {
     this.router.navigateByUrl('/');
   }
+
+
+  ngAfterViewInit() {
+    document.querySelectorAll('a[href]').forEach(link => {
+      if (!link.hasAttribute('target')) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener');
+      }
+    });
+  }
 }

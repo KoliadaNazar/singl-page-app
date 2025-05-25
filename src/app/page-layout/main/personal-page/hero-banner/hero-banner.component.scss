@@ -1,0 +1,46 @@
+@use 'media' as *;
+@use 'mixins' as *;
+
+.hero-banner {
+    @include laptop-min-width {
+      padding-top: 54px;
+    }
+}
+
+.banner__inner {
+  min-height: 200px;
+  padding:  16px;
+  background: var(--white);
+  @include background-snow;
+  display: grid;
+  grid-row-gap: 20px;
+  justify-items: center;
+    @include tablet-min-width {
+      display: flex;
+      justify-content: space-evenly;
+    }
+}
+
+.banner__text-wrap {   
+  @include flex-column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.banner-heading {
+  text-align: center;
+}
+
+.banner__text {
+  max-width: 800px;
+}
+
+.banner__image-wrap {
+  height: 200px;
+  width: 180px;
+  @include tablet-min-width {
+      height: 260px;
+      width: 220px;
+    }
+}
+
