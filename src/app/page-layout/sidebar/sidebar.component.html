@@ -34,7 +34,7 @@
         <span class="nav-list__link-divider"></span>
       </a>
       <button type="button" class="sidebar-arrow" (click)="toggleCssSubmenu()" >
-        <svg class="sidebar__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="currentColor" d="M10.103 12.778L16.81 6.08a.69.69 0 0 1 .99.012a.726.726 0 0 1-.012 1.012l-7.203 7.193a.69.69 0 0 1-.985-.006L2.205 6.72a.727.727 0 0 1 0-1.01a.69.69 0 0 1 .99 0z"/>
+        <svg [class.rotated]="isCssSubmenuOpen" class="sidebar__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="currentColor" d="M10.103 12.778L16.81 6.08a.69.69 0 0 1 .99.012a.726.726 0 0 1-.012 1.012l-7.203 7.193a.69.69 0 0 1-.985-.006L2.205 6.72a.727.727 0 0 1 0-1.01a.69.69 0 0 1 .99 0z"/>
         </svg>
       </button>
       <ul class="sidebar__submenu-list"  #submenuCss >
@@ -56,7 +56,7 @@
         <span class="nav-list__title">Img</span>
       </a>
       <button type="button" class="sidebar-arrow" (click)="toggleImgSubmenu()">
-        <svg class="sidebar__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="currentColor" d="M10.103 12.778L16.81 6.08a.69.69 0 0 1 .99.012a.726.726 0 0 1-.012 1.012l-7.203 7.193a.69.69 0 0 1-.985-.006L2.205 6.72a.727.727 0 0 1 0-1.01a.69.69 0 0 1 .99 0z"/>
+        <svg  [class.rotated]="isImgSubmenuOpen" class="sidebar__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="currentColor" d="M10.103 12.778L16.81 6.08a.69.69 0 0 1 .99.012a.726.726 0 0 1-.012 1.012l-7.203 7.193a.69.69 0 0 1-.985-.006L2.205 6.72a.727.727 0 0 1 0-1.01a.69.69 0 0 1 .99 0z"/>
         </svg>
       </button> 
       <ul class="sidebar__submenu-list" #submenuImg>
