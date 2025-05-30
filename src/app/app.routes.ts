@@ -5,7 +5,7 @@ import { DomPageComponent } from './page-layout/main/dom-page/dom-page.component
 import { BrowserComponent } from './page-layout/main/browser/browser.component';
 import { HomeLayoutComponent } from './page-layout/main/home-layout/home-layout.component';
 import { PersonalPageComponent } from './page-layout/main/personal-page/personal-page.component';
-
+import { ImagesPageComponent } from './page-layout/main/images-page/images-page.component';
 
 export const routes: Routes = [
   
@@ -31,6 +31,13 @@ export const routes: Routes = [
     path: 'browser',
     component: BrowserComponent
   },
+
+  
+   { 
+    path: 'images-page',
+    component: ImagesPageComponent
+  },
+
 
   { 
     path: 'dom-page',

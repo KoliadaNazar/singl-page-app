@@ -6,6 +6,9 @@ import { GitPageComponent } from './git-page/git-page.component';
 import { DomPageComponent } from './dom-page/dom-page.component';
 import { BrowserComponent  } from './browser/browser.component';
 import { PersonalPageComponent } from './personal-page/personal-page.component';
+import { ImagesPageComponent } from './images-page/images-page.component';
+
+
 
 @Component({
   selector: 'app-main',
@@ -15,7 +18,8 @@ import { PersonalPageComponent } from './personal-page/personal-page.component';
     GitPageComponent,
     DomPageComponent,
     BrowserComponent,
-    PersonalPageComponent
+    PersonalPageComponent,
+    ImagesPageComponent 
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
