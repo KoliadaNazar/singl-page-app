@@ -1,0 +1,94 @@
+
+  <div class="container article">
+  <div class="container--border article__inner">
+    <h2 class="article__heading">Image Optimization</h2>
+    <p class="article__paragraph">In modern web development, image optimization is crucial
+      for performance, user experience, and SEO. Large, unoptimized images slow down
+      page loads, increase bandwidth usage, and frustrate users. As a frontend developer,
+      you need efficient strategies to compress images without sacrificing quality.
+    </p>
+    <div class="article__cell">
+      <h3 class="article_list-heading">Why Image Compression Matters</h3>
+      <ul class="article__list">
+        <li class="article__list-item">
+          Faster page loads: Smaller images reduce HTTP requests and improve LCP.
+        </li>
+        <li class="article__list-item">
+          Better SEO: Page speed is a ranking factor for search engines.
+        </li>
+         <li class="article__list-item">
+          Reduced bandwidth costs: Optimized images save data for mobile users.
+        </li>
+        <li class="article__list-item">
+          Improved UX: Quick-loading pages keep users engaged.
+        </li>
+      </ul>
+    </div>
+
+    <h2 class="article__heading">Best Image Compression Techniques</h2>
+    <div class="article__cell">
+      <h3 class="article_list-heading"> 1. Choose the Right Format</h3>
+      <ul class="article__list">
+        <li class="article__list-item">JPEG: Best for photographs (lossy compression). </li>
+        <li class="article__list-item">PNG: Ideal for transparency (lossless, but larger).</li>
+        <li class="article__list-item">WebP: Modern format (25-35% smaller than JPEG/PNG).</li>
+         <li class="article__list-item">
+          AVIF: Next-gen format (better compression than WebP, but less browser support).
+         </li>
+      </ul>
+    </div>
+    <div class="article__cell">
+      <h3 class="article_list-heading"> 2. Use Compression Online  Tools</h3>
+      <ul class="article__list">
+        <li class="article__list-item"> TinyPNG. </li>
+        <li class="article__list-item">Squoosh</li>
+        <li class="article__list-item">Compressor.io</li>
+         <li class="article__list-item">
+          iloveimg.com
+         </li>
+      </ul>
+    </div>
+
+    <div class="article__cell">
+      <h3 class="article_list-heading">
+         3. Responsive Images with Picture, Source and srcset. Serve different
+          sizes based on device resolution:
+      </h3>
+      <div class="banner__image-wrap">
+          <img class="banner__img" src="img/adaptive image.png" alt="git_commands">
+      </div>
+    </div>
+
+    <h3 class="article_list-heading"> 4. Lazy Loading</h3>
+    <pre>
+      &lt;img src="name.jpg <br>
+        data-src="actual-image.jpg"<br>
+        oading="lazy"/&gt;
+    </pre>
+
+    <div class="article__cell">
+      <h3 class="article_list-heading"> CDN & Advanced Optimization.
+        Use image CDNs like Cloudinary, Imgix, or Akamai for:
+      </h3>
+      <ul class="article__list">
+        <li class="article__list-item">
+           Automatic format selection (e.g., WebP for supported browsers). 
+          </li>
+        <li class="article__list-item">Dynamic resizing and compression.</li>
+        <li class="article__list-item">Smart cropping and quality adjustments</li>
+      </ul>
+    </div>
+
+    <h2 class="article__heading article__heading--warning">Key Takeaways</h2>
+      <ul class="article__list">
+        <li class="article__list-item"> Always compress images before uploading. </li>
+        <li class="article__list-item">Prefer WebP/AVIF over JPEG/PNG when possible.</li>
+        <li class="article__list-item">
+          Use responsive images (picture/source) for different screen sizes.
+        </li>
+         <li class="article__list-item">Lazy load offscreen images.</li>
+         <li class="article__list-item">Leverage CDNs for dynamic optimization.</li>
+      </ul>
+  </div>
+</div>
+

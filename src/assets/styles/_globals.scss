@@ -85,7 +85,7 @@ body::-webkit-scrollbar {
   }
 
 .container,
-.banner__container {
+.banner {
   position:relative;
   width:100%;
   @include laptop-min-width {
@@ -107,6 +107,4 @@ body::-webkit-scrollbar {
 			
   }
 }  
-
-
 

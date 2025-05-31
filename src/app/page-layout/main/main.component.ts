@@ -7,7 +7,7 @@ import { DomPageComponent } from './dom-page/dom-page.component';
 import { BrowserComponent  } from './browser/browser.component';
 import { PersonalPageComponent } from './personal-page/personal-page.component';
 import { ImagesPageComponent } from './images-page/images-page.component';
-
+import { CssPageComponent } from './css-page/css-page.component';
 
 
 @Component({
@@ -19,7 +19,8 @@ import { ImagesPageComponent } from './images-page/images-page.component';
     DomPageComponent,
     BrowserComponent,
     PersonalPageComponent,
-    ImagesPageComponent 
+    ImagesPageComponent,
+    CssPageComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'

@@ -1,0 +1,68 @@
+<div class="container article" >
+  <div class="container--border article__inner">
+    <h2 class="article__heading">CSS Grid</h2>
+    <p class="article__paragraph">CSS Grid is a powerful 2-dimensional layout system
+       that allows developers to create complex, responsive designs with clean and
+        maintainable code.
+    </p>
+    
+    <div class="article__cell">
+      <h3 class="article_list-heading article--warning">
+        <code>display: grid;</code> behaves like a block-level element by default.
+        That means:
+      </h3>
+      <ul class="article__list article--warning">
+        <li class="article__list-item">It takes up the full width of its parent container. </li>
+        <li class="article__list-item">It starts on a new line, pushing other content below.</li>
+        <li class="article__list-item">
+          You can apply block-level styles like width, margin, padding, etc.
+        </li>
+      </ul>
+    </div>
+
+    <h2 class="article__heading"> grid-auto-flow: </h2>
+    <p class="article__paragraph">When you set <code>display: grid;</code>
+      on a container, the grid is created with one column and as many
+      rows as needed to fit the child elements.That's because we have 
+      <code>grid-auto-flow: row;</code> by defolt.
+    </p>
+
+    <div class="grid grid-auto-flow-row">
+      <span class="grid__item">Grid row </span>
+      <span class="grid__item">Grid row</span>
+      <span class="grid__item">Grid row</span>
+    </div>
+
+    <p class="article__paragraph">If you change the defolt value <br>
+       <code>grid-auto-flow: row;</code> to  <br>
+      <code>grid-auto-flow: column;</code>   <br>
+       as a result you will see the grid filling by columns instead of rows.
+    </p>
+
+    <div class="grid grid-auto-flow-column">
+      <span class="grid__item ">Grid column </span>
+      <span class="grid__item">Grid column</span>
+      <span class="grid__item">Grid column</span>
+    </div>
+
+    <h3 class="article_list-heading article--warning"> You can also use
+      <code>display: inline-grid;</code> which behaves like an <strong>inline-block</strong> element.
+      In this case, the grid cells will adjust to the size of their content.
+    </h3>
+
+    <div class="article__grid-wrapper">
+      <div class="grid grid-inline">
+        <span class="grid__item">Content width</span>
+        <span class="grid__item">Content width</span>
+        <span class="grid__item">Content width</span>
+        <span class="grid__item">Grid inline </span>
+        <span class="grid__item">Grid inline</span>
+        <span class="grid__item">Grid inline</span>
+        <span class="grid__item">Grid inline </span>
+        <span class="grid__item">Grid inline</span>
+        <span class="grid__item">Grid inline</span>
+        <span class="grid__item">Grid inline </span>
+      </div>
+    </div>
+  </div>
+</div>

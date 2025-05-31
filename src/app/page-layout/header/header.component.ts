@@ -31,7 +31,7 @@ export class HeaderComponent {
   }
 
   ngAfterViewInit() {
-    const navLinks = document.querySelectorAll('.nav-list__link');
+    const navLinks = document.querySelectorAll('.nav-list__link, .sidebar__submenu-link');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         const sidebar = document.querySelector('.sidebar');
@@ -41,5 +41,7 @@ export class HeaderComponent {
       });
     });
   }
+  
+
   
 }

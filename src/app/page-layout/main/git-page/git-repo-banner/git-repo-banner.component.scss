@@ -13,6 +13,9 @@
   background: var(--white);
   @include background-snow;
   text-align: center;
+  @include tablet-min-width {
+      padding:  32px;
+    }
 }
 
 .banner__text-wrap {

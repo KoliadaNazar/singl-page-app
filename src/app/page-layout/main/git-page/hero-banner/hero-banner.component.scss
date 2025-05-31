@@ -16,11 +16,16 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+    @include tablet-min-width {
+      padding:  32px;
+    }
 }
+
 .banner__text-wrap {
   display: grid;
   grid-row-gap: 16px;
 }
+
 .banner-heading {
   font-size: 20px;
   text-align: center;

@@ -6,6 +6,11 @@ import { BrowserComponent } from './page-layout/main/browser/browser.component';
 import { HomeLayoutComponent } from './page-layout/main/home-layout/home-layout.component';
 import { PersonalPageComponent } from './page-layout/main/personal-page/personal-page.component';
 import { ImagesPageComponent } from './page-layout/main/images-page/images-page.component';
+import { CssPageComponent  } from './page-layout/main/css-page/css-page.component';
+
+
+
+
 
 export const routes: Routes = [
   
@@ -44,6 +49,10 @@ export const routes: Routes = [
     component: DomPageComponent
   },
 
+  { 
+    path: 'css-page',
+    component: CssPageComponent 
+  },
   
   { path: '**', redirectTo: '' } 
 ];

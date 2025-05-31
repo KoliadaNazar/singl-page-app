@@ -1,0 +1,252 @@
+<div class="container article" >
+  <div class="container--border article__inner">
+   
+  <h2 class="article__heading"> Grid Lines </h2>
+  <ul class="article__list">
+    <li class="article__list-item">The lines between columns are called column lines. </li>
+    <li class="article__list-item">The lines between rows are called row lines.</li>
+  </ul>
+  <div class="banner__image-wrap">
+    <img class="banner__img" src="img/grid-lines.png" alt="git_commands">
+  </div>
+   
+    <h2 class="article__heading">
+      Defining Rows and Columns.
+    </h2>
+    <ul class="article__list">
+      <li class="article__list-item">
+        <code>grid-template-columns:</code> defines the number and size of columns.
+     </li>
+      <li class="article__list-item">
+        <code>grid-template-rows:</code>  defines the number and size of rows.
+      </li>
+       <li class="article__list-item">
+        The spaces between each column/row are called gaps.
+      </li>
+    </ul>
+
+    <p class="article__paragraph article--code">
+      .grid &lbrace; <br>
+        max-width: 380px; <br>
+        display: grid; <br>
+        column-gap: 18px; <br>
+        row-gap: 18px; <br>
+        grid-template-columns: repeat(3, minmax(60px, 100px)); <br>
+        grid-template-rows: repeat(3, 100px); <br>
+        &rbrace;
+    </p>
+
+    <div class="grid grid-template">
+      <span class="grid__item">1</span>
+      <span class="grid__item">2</span>
+      <span class="grid__item">3</span>
+      <span class="grid__item">4</span>
+      <span class="grid__item">5</span>
+      <span class="grid__item">6</span>
+      <span class="grid__item">7</span>
+      <span class="grid__item">8</span>
+      <span class="grid__item">9</span>
+    </div>
+
+    <div></div>
+    <h2 class="article__heading">Grid Aligning </h2>
+    <div class="article__separator"></div>
+    <h2 class="article__heading">1. Aligning the Entire Grid <br>
+      Works only when the grid is smaller than the container’s width.
+    </h2>
+    <p class="article__paragraph">
+       <code>justify-content</code> - Horizontal Alignment <br>
+       <code>align-content</code> - Vertical Alignment <br>
+       <code>place-content</code> - is a shorthand property for both
+      </p>
+    <div class="article__cell">
+      <h3 class="article_list-heading">Values:</h3>
+      <ul class="article__list">
+        <li class="article__list-item">
+          stretch: stretches the grid to fill the container (default if possible)
+        </li>
+        <li class="article__list-item">
+          start: aligns the grid to the left
+        </li>
+        <li class="article__list-item">
+          end: aligns the grid to the right
+        </li>
+        <li class="article__list-item">
+          center: centers the grid horizontally
+        </li>
+        <li class="article__list-item">
+          space-between: equal space between grid tracks
+        </li>
+        <li class="article__list-item">
+          space-around: equal space around each track
+        </li>
+        <li class="article__list-item">
+          space-evenly: equal space between and around all tracks
+        </li>
+      </ul>
+    </div>
+    <p class="article__paragraph article--code">
+      .grid &lbrace; <br>
+        height: 440px; <br> 
+        max-width: 440px; <br>
+        display: grid; <br>
+        grid-template-columns: repeat(3, minmax(4px, 80px)); <br>
+        grid-template-rows: repeat(3, 80px); <br>
+        justify-content: center; <br>
+        align-content: center; <br>
+        &rbrace;
+    </p>
+    <div class="grid grid-content-place-center">
+      <span class="grid__item">1</span>
+      <span class="grid__item">2</span>
+      <span class="grid__item">3</span>
+      <span class="grid__item">4</span>
+      <span class="grid__item">5</span>
+      <span class="grid__item">6</span>
+      <span class="grid__item">7</span>
+      <span class="grid__item">8</span>
+      <span class="grid__item">9</span>
+    </div>
+
+    <p class="article__paragraph article--code">
+      .grid &lbrace; <br>
+        height: 440px; <br> 
+        max-width: 440px; <br>
+        display: grid; <br>
+        grid-template-columns: repeat(3, minmax(4px, 80px)); <br>
+        grid-template-rows: repeat(3, 80px); <br>
+        place-content: end;<br>
+        &rbrace;
+    </p>
+    <div class="grid grid-place-content-end ">
+      <span class="grid__item">1</span>
+      <span class="grid__item">2</span>
+      <span class="grid__item">3</span>
+      <span class="grid__item">4</span>
+      <span class="grid__item">5</span>
+      <span class="grid__item">6</span>
+      <span class="grid__item">7</span>
+      <span class="grid__item">8</span>
+      <span class="grid__item">9</span>
+    </div>
+
+    <div></div>
+    <h2 class="article__heading">2. Aligning Items in the Grid <br>
+      Controls how items are aligned within their individual grid areas.
+    </h2>
+    <p class="article__paragraph">
+      <code>justify-items</code> - Horizontal alignment of items inside their cells <br>
+      <code>align-items</code> - Vertical alignment of items inside their cells <br>
+      <code>place-items</code> - is a shorthand property for both
+    </p>
+    <div class="article__cell">
+      <h3 class="article_list-heading">Values:</h3>
+      <ul class="article__list">
+        <li class="article__list-item">
+          stretch: stretches the item to fill the grid area (default)
+        </li>
+        <li class="article__list-item">
+          start: aligns the item to the start of the area
+        </li>
+        <li class="article__list-item">
+          end: aligns the item to the end of the area
+        </li>
+        <li class="article__list-item">
+          center: centers the item inside the area
+        </li>
+      </ul>
+    </div>
+
+    <p class="article__paragraph article--code">
+      .grid &lbrace; <br>
+        height: 440px; <br> 
+        max-width: 440px; <br>
+        display: grid; <br> 
+        grid-template-columns: repeat(2, minmax(40px, 120px)); <br>
+        grid-template-rows: repeat(2, 120px); <br>
+        place-content: center; <br>
+        align-items: center; <br>
+        justify-items: end; <br>
+        &rbrace; <br>
+    </p>
+    <div class="grid grid-place-items-center ">
+      <span class="grid__item-center">Item 1</span>
+      <div class="grid__helper"></div>
+      <span class="grid__item-center">Item 2</span>
+      <div class="grid__helper"></div>
+      <span class="grid__item-center">Item 3</span>
+      <div class="grid__helper"></div>
+      <span class="grid__item-center">Item 4</span>
+      <div class="grid__helper"></div>   
+    </div>
+    <div></div>
+    <h2 class="article__heading">3. Aligning Individual Items Inside Their Cells <br>
+       Used to override alignment for a single grid item.
+    </h2>
+    <p class="article__paragraph">
+      <code>justify-self</code> - Horizontal alignment of an individual item <br>
+      <code>align-self</code> - Vertical alignment of an individual item <br>
+      <code>place-self</code> - is a shorthand property for both
+    </p>
+    <div class="article__cell">
+      <h3 class="article_list-heading">Values:</h3>
+      <ul class="article__list">
+        <li class="article__list-item">
+          stretch: stretches the item to fill the grid area (default)
+        </li>
+        <li class="article__list-item">
+          start: aligns the item to the start of the area
+        </li>
+        <li class="article__list-item">
+          end: aligns the item to the end of the area
+        </li>
+        <li class="article__list-item">
+          center: centers the item inside the area
+        </li>
+      </ul>
+    </div>
+
+    <p class="article__paragraph article--code">
+      .grid &lbrace; <br>
+        display: grid; <br> 
+        grid-template-columns: repeat(2, minmax(40px, 120px)); <br>
+        grid-template-rows: repeat(2, 120px); <br>
+        place-content: center; <br>
+        &rbrace; <br>
+        <br>
+      .grid__item:nth-child(1)&lbrace; <br>
+        align-self: start; <br>
+        justify-self: start; <br>
+      &rbrace; <br>
+      <br>
+      .grid__:nth-child(2)&lbrace; <br>
+        align-self: center; <br>
+        justify-self: center; <br>
+      &rbrace; <br>
+      <br>
+      .grid__:nth-child(3)&lbrace; <br>
+        align-self: start; <br>
+        justify-self: center; <br>
+      &rbrace; <br>
+      <br>
+      .grid__:nth-child(3)&lbrace; <br>
+        align-self: end; <br>
+        justify-self: end; <br>
+      &rbrace;
+    </p>
+    <div class="grid grid-pace-self">
+      <span class="grid__item-place-self">Item 1</span>
+      <div class="grid__helper"></div>
+      <span class="grid__item-place-self">Item 2</span>
+      <div class="grid__helper"></div>
+      <span class="grid__item-place-self">Item 3</span>
+      <div class="grid__helper"></div>
+      <span class="grid__item-place-self">Item 4</span>
+      <div class="grid__helper"></div>   
+    </div>
+  </div> 
+</div>
+
+
+
+

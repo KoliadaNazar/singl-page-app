@@ -18,7 +18,7 @@
   justify-content: space-evenly;
   gap: 20px;
     @include tablet-min-width {
-      
+      padding:  32px;
       flex-direction: row;
     }
 }
@@ -29,13 +29,10 @@
   display: grid;
   grid-row-gap: 16px;
 }
-.banner-heading {
-  font-size: 20px;
-  text-align: center;
-}
 
-.banner__text {
-  max-width: 800px;
+.banner-heading {
+  font-size: 22px;
+  text-align: center;
 }
 
 

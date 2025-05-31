@@ -13,7 +13,7 @@ $mobile-max-width: 767px;
 $desktop-min-width: 1281px;
 $laptop-min-width: 1024px;
 $tablet-min-width: 768px;
-$mobile-min-width: 360px;
+$mobile-min-width: 380px;
 
 @mixin mobile-min-width {
   @media (min-width: $mobile-min-width) {
