@@ -7,8 +7,7 @@ import { HomeLayoutComponent } from './page-layout/main/home-layout/home-layout.
 import { PersonalPageComponent } from './page-layout/main/personal-page/personal-page.component';
 import { ImagesPageComponent } from './page-layout/main/images-page/images-page.component';
 import { CssPageComponent  } from './page-layout/main/css-page/css-page.component';
-
-
+import { HtmlPageComponent  } from './page-layout/main/html-page/html-page.component';
 
 
 
@@ -52,6 +51,11 @@ export const routes: Routes = [
   { 
     path: 'css-page',
     component: CssPageComponent 
+  },
+
+    { 
+    path: 'html-page',
+    component: HtmlPageComponent 
   },
   
   { path: '**', redirectTo: '' } 
