@@ -27,7 +27,6 @@
 
     <p class="article__paragraph article--code">
       .grid &lbrace; <br>
-        max-width: 380px; <br>
         display: grid; <br>
         column-gap: 18px; <br>
         row-gap: 18px; <br>
@@ -219,22 +218,22 @@
         justify-self: start; <br>
       &rbrace; <br>
       <br>
-      .grid__:nth-child(2)&lbrace; <br>
+      .grid__item:nth-child(2)&lbrace; <br>
         align-self: center; <br>
         justify-self: center; <br>
       &rbrace; <br>
       <br>
-      .grid__:nth-child(3)&lbrace; <br>
+      .grid__item:nth-child(3)&lbrace; <br>
         align-self: start; <br>
         justify-self: center; <br>
       &rbrace; <br>
       <br>
-      .grid__:nth-child(3)&lbrace; <br>
+      .grid__item:nth-child(4)&lbrace; <br>
         align-self: end; <br>
         justify-self: end; <br>
       &rbrace;
     </p>
-    <div class="grid grid-pace-self">
+    <div class="grid grid-place-self">
       <span class="grid__item-place-self">Item 1</span>
       <div class="grid__helper"></div>
       <span class="grid__item-place-self">Item 2</span>
@@ -244,8 +243,168 @@
       <span class="grid__item-place-self">Item 4</span>
       <div class="grid__helper"></div>   
     </div>
+  <div> </div>
+  <h2 class="article__heading"> Placing Grid Items<br> 
+    Manually place items within the grid using line numbers or named areas.
+  </h2> 
+  <ul class="article__list">
+    <li class="article__list-item">
+      <code>grid-column-start</code> / <code>grid-column-end</code> – place item horizontally
+    </li>
+     <li class="article__list-item">
+      <code>grid-column</code> - shorthand for <code>grid-column-start</code> and <code>grid-column-end</code>
+    </li>
+    <li class="article__list-item">
+     <code>grid-row-start</code> / <code>grid-row-end</code> – place item vertically <br>
+    </li>
+    <li class="article__list-item">
+     <code>grid-row</code>:shorthand for <code>grid-row-start</code> and <code>grid-row-end</code>
+    </li>
+     <li class="article__list-item">
+      <code>grid-area</code>: The grid-area property is a shorthand for: <br>
+      <pre>
+      <code>grid-row-start</code> <br>
+      <code>grid-column-start</code> <br>
+      <code>grid-row-end</code> <br>
+      <code>grid-column-end</code>
+      </pre>
+    </li>
+   </ul>
+
+    <p class="article__paragraph article--code">
+      .grid &lbrace; <br>
+        max-width: 420px; <br>
+      display: grid; <br>
+      grid-template-columns: repeat(3, minmax(40px, 120px)); <br>
+      grid-template-rows: repeat(2, 120px); <br>
+        &rbrace; <br>
+        <br>
+      .grid__item:nth-child(1)&lbrace; <br>
+        grid-column-start: 1; <br>
+        grid-column-end: 3
+      &rbrace; <br>
+      <br>
+      .grid__item:nth-child(3)&lbrace; <br>
+        grid-column-start: 1;   <br>
+        grid-column-end: 1;  <br>
+        grid-row-start: 2;  <br>
+        grid-row-end: 4;  <br>
+      &rbrace; <br>
+      <br>
+      .grid__item:nth-child(6)&lbrace; <br>
+        grid-column-start: 2;  <br>
+        grid-column-end: 4;  <br>
+        grid-row-start: 3;  <br>
+        grid-row-end: 4  <br>
+      &rbrace;
+    </p>
+    <div class="grid grid-column">
+      <span class="grid__item grid-column_item ">Item 1</span>
+      <span class="grid__item grid-column_item">Item 2</span>
+      <span class="grid__item grid-column_item">Item 3</span>
+      <span class="grid__item grid-column_item">Item 4</span>   
+      <span class="grid__item grid-column_item">Item 5</span>   
+      <span class="grid__item grid-column_item">Item 6</span>   
+    </div>
+
+    <p class="article__paragraph article--code">
+      .grid &lbrace; <br>
+        max-width: 420px; <br>
+      display: grid; <br>
+      grid-template-columns: repeat(3, minmax(40px, 120px)); <br>
+      grid-template-rows: repeat(2, 120px); <br>
+        &rbrace; <br>
+        <br>
+      .grid__item:nth-child(1)&lbrace; <br>
+        grid-column: 1 / span 2;; <br>
+      &rbrace; <br>
+      <br>
+      .grid__item:nth-child(3)&lbrace; <br>
+        grid-column: 2 / 4; <br>
+        grid-row: 2 / 4;; <br>
+      &rbrace; <br>
+      <br>
+      .grid__item:nth-child(6)&lbrace; <br>
+        grid-area: 4 / 1 / 5 / 4; <br>
+        (grid-area: row-start / column-start / row-end / column-end) <br>
+      &rbrace;
+    </p>
+    <div class="grid grid-span-area">
+      <span class="grid__item grid-span-area_item ">Item 1</span>
+      <span class="grid__item grid-span-area_item">Item 2</span>
+      <span class="grid__item grid-span-area_item">Item 3</span>
+      <span class="grid__item grid-span-area_item">Item 4</span>   
+      <span class="grid__item grid-span-area_item">Item 5</span>   
+      <span class="grid__item grid-span-area_item">Item 6</span>   
+    </div>
+    <div></div>
+
+    <h2 class="article__heading">Named Areas. Advanced</h2>
+    <p class="article__paragraph">
+      <code>grid-template-areas</code> – defines named layout areas in the grid <br>
+      <code>grid-area</code> – assigns a grid item to a named area
+    </p>
+    <div class="article__cell">
+      <h3 class="article_list-heading">Syntax:</h3>
+      <ul class="article__list">
+        <li class="article__list-item">
+          <code>grid-template-areas:</code> <br>
+          <code>"header header"</code> <br>
+          <code>"sidebar main"</code> <br>
+          <code>"footer footer"</code>
+        </li>
+        <li class="article__list-item">
+          Each string represents a row; names define the area cells.
+        </li>
+        <li class="article__list-item">
+          Use <code>"."</code> for empty cells with no name.
+        </li>
+      </ul>
+
+    <p class="article__paragraph article--code">
+      .grida-area &lbrace; <br>
+      max-width: 600px; <br>
+      display: grid; <br>
+      gap: 18px; <br>
+      grid-template-rows: 50px 250px 50px; <br>
+      grid-template-columns: 10px minmax(20px, 110px) 2fr 10px; <br>
+      grid-template-areas:  <br>
+       '. header header .' <br>
+       '. sidebar main .' <br>
+       '. footer footer .'; <br> <br>
+
+      &rbrace; <br>
+      .grid__area-item:nth-child(1)&lbrace; <br>
+        grid-area: header;<br>
+      &rbrace; <br><br>
+
+      .grid__area-item:nth-child(2)&lbrace; <br>
+        grid-area: sidebar; <br>
+        (grid-area: row-start / column-start / row-end / column-end) <br>
+      &rbrace; <br><br>
+
+      .grid__area-item:nth-child(3)&lbrace; <br>
+        grid-area: main; <br>
+        (grid-area: row-start / column-start / row-end / column-end) <br>
+      &rbrace; <br> <br>
+
+      .grid__area-item:nth-child(4)&lbrace; <br>
+        grid-area: footer; <br>
+        (grid-area: row-start / column-start / row-end / column-end) <br>
+      &rbrace;
+    </p>
+    </div>
+     <div class="grid grid-area">
+      <span class="grid__item grid-area_item">header</span>
+      <span class="grid__item grid-area_item">sidebar</span>
+      <span class="grid__item grid-area_item">main</span>   
+      <span class="grid__item grid-area_item">footer</span>    
+    </div>
+      
   </div> 
 </div>
+
+
 
 
 
