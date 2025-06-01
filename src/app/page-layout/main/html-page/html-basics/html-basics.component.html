@@ -1,1 +1,52 @@
-<p>html-basics works!</p>
+<div class="container article" >
+  <div class="container--border article__inner">
+    <h2 class="article__heading">HTML document structure</h2>
+    <p class="article__paragraph article--code">
+      &lt;!DOCTYPE html&gt; <br>
+      &lt;html lang="en"&gt; <br>
+      &nbsp;&lt;head&gt; <br>
+      &nbsp; &lt;meta charset="UTF-8"&gt; <br>
+      &nbsp; &lt;meta name="viewport" &nbsp;content="width=device-width,initial-scale=1.0"&gt;<br>
+      &nbsp; &lt;title&gt;HTML Structure&lt;/title&gt; <br>
+      &nbsp; &lt;link rel="stylesheet" href="styles.css"&gt; <br>
+      &lt;/head&gt; <br>
+      &lt;body&gt; <br>
+      &nbsp;&lt;h1&gt;Welcome!&lt;/h1&gt; <br>
+      &nbsp;&lt;p&gt;This is a basic HTML document structure. 
+          It's includes such elements:doctype, html, head, body. <br>
+      &nbsp;&lt;/p&gt; <br>
+        &lt;script src="main.js"&gt;&lt;/script&gt; <br>
+      &lt;/body&gt; <br>
+      &lt;/html&gt; <br>
+    </p>
+
+    <h2 class="article__heading">HTML SEO (Search Engine Optimization)</h2>
+    <p class="article__paragraph"> SEO is the process of improving a website
+       to rank higher in search engines. HTML plays a key role in SEO 
+       because search engines read your site’s HTML to understand your content.
+    </p>
+
+    <div class="article__cell">
+      <h3 class="article_list-heading article--warning">
+        <code>display: grid;</code> behaves like a block-level element by default.
+        That means:
+      </h3>
+      <ul class="article__list article--warning">
+        <li class="article__list-item">It takes up the full width of its parent container. </li>
+        <li class="article__list-item">It starts on a new line, pushing other content below.</li>
+        <li class="article__list-item">
+          You can apply block-level styles like width, margin, padding, etc.
+        </li>
+      </ul>
+    </div>
+
+    <h2 class="article__heading"> grid-auto-flow: </h2>
+    <p class="article__paragraph">When you set <code>display: grid;</code>
+      on a container, the grid is created with one column and as many
+      rows as needed to fit the child elements.That's because we have 
+      <code>grid-auto-flow: row;</code> by defolt.
+    </p>
+
+  
+  </div>
+</div>
