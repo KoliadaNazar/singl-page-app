@@ -20,33 +20,208 @@
       &lt;/html&gt; <br>
     </p>
 
-    <h2 class="article__heading">HTML SEO (Search Engine Optimization)</h2>
-    <p class="article__paragraph"> SEO is the process of improving a website
-       to rank higher in search engines. HTML plays a key role in SEO 
-       because search engines read your site’s HTML to understand your content.
+    <h2 class="article__heading">HTML Meta Tags</h2>
+    <p class="article__paragraph">
+      HTML meta tags provide metadata about a web page and are placed inside the
+      &lt;head&gt; section of the HTML document. They do not display content on the
+      page but help browsers, search engines, and other services understand the page better.
+    </p>
+
+    <ul class="article__list">
+      <li class="article__list-item">Improve SEO (Search Engine Optimization) </li>
+      <li class="article__list-item">Ensure correct rendering on all devices</li>
+      <li class="article__list-item">Provide useful information for social sharing</li>
+    </ul>
+
+    <p class="article__paragraph article--code">
+      &lt;head&gt; <br>
+      &nbsp;&lt;meta charset="UTF-8"&gt; <br>
+      &nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; <br>
+      &nbsp;&lt;meta name="description" content="Learn about HTML meta tags."&gt; <br>
+      &nbsp;&lt;meta name="keywords" content=" web developer,HTML, CSS, Js, Angular, portfolio"&gt; <br>
+      &nbsp;&lt;meta name="author" content="Nazar Koliada"&gt; <br>
+      &lt;/head&gt;
     </p>
 
     <div class="article__cell">
-      <h3 class="article_list-heading article--warning">
-        <code>display: grid;</code> behaves like a block-level element by default.
-        That means:
-      </h3>
-      <ul class="article__list article--warning">
-        <li class="article__list-item">It takes up the full width of its parent container. </li>
-        <li class="article__list-item">It starts on a new line, pushing other content below.</li>
+      <h2 class="article_list-heading ">The &lt;meta charset="UTF-8"&gt;
+        defines the character encoding for a web page. Here's what it does:
+      </h2>
+      <ul class="article__list">
+        <li class="article__list-item">Tells the browser that the page uses UTF-8 encoding</li>
         <li class="article__list-item">
-          You can apply block-level styles like width, margin, padding, etc.
+          Prevents display issues with special characters, emojis, and multilingual text
+        </li>
+        <li class="article__list-item">Should always be first in &lt;head&gt;</li>
+      </ul>
+    </div>
+
+    <div class="article__cell">
+      <h2 class="article_list-heading ">Viewport (for mobile devices)</h2>
+      <ul class="article__list">
+        <li class="article__list-item">Makes page mobile-friendly</li>
+        <li class="article__list-item">
+         <code> width=device-width</code> matches screen width
+        </li>
+        <li class="article__list-item"><code> initial-scale=1.0</code> sets default zoom level</li>
+      </ul>
+    </div>
+
+    <div class="article__cell">
+      <h2 class="article_list-heading ">Page Description</h2>
+      <ul class="article__list">
+        <li class="article__list-item">Used by search engines in snippets</li>
+        <li class="article__list-item">Should be unique for each page</li>
+        <li class="article__list-item">Recommended length: 150-160 characters</li>
+      </ul>
+    </div>
+
+    <div class="article__cell">
+      <h2 class="article_list-heading ">Keywords</h2>
+      <ul class="article__list">
+        <li class="article__list-item">Specifies page keywords</li>
+        <li class="article__list-item">Don't overuse (10-15 words max)</li>
+      </ul>
+    </div>
+
+    <div class="article__cell">
+      <h2 class="article_list-heading ">Author</h2>
+      <ul class="article__list">
+        <li class="article__list-item">Identifies content author</li>
+        <li class="article__list-item">May include contact information</li>
+      </ul>
+    </div>
+
+    <div class="article__cell">
+      <h2 class="article_list-heading ">Robots</h2>
+      <ul class="article__list">
+        <li class="article__list-item">
+          Controls whether the page should be indexed or not by search engines.
+        </li>
+        <li class="article__list-item article--code">
+           &lt;meta name="robots" content="index, follow"&gt;
         </li>
       </ul>
     </div>
 
-    <h2 class="article__heading"> grid-auto-flow: </h2>
-    <p class="article__paragraph">When you set <code>display: grid;</code>
-      on a container, the grid is created with one column and as many
-      rows as needed to fit the child elements.That's because we have 
-      <code>grid-auto-flow: row;</code> by defolt.
-    </p>
+    <h2 class="article__heading">Semantic HTML Tags</h2>
+    <div class="article__cell">
+      <p class="article__paragraph">
+       A semantic element clearly describes its meaning to both the browser and the developer.
+      </p> <br>
+      <h2 class="article__list-heading article--warning">
+        Non-semantic tags are elements that don’t describe their content's meaning or role
+      </h2>
+      <ul class="article__list article--warning">
+        <li class="article__list-item ">
+           &lt;div&gt; &lt;/div&gt; - this is non semantic tag
+        </li>
+        <li class="article__list-item">
+          &lt;span&gt; &lt;/span&gt; - this is non semantic tag
+        </li>
+      </ul>
+    </div>
+      
+    <div class="article__cell">
+      <h2 class="article__list-heading">Document Structure</h2>
+      <ul class="article__list">
+        <li class="article__list-item article--code">
+           &lt;header&gt; &lt;/header&gt; -  Introductory content, logos, navigation
+        </li>
+        <li class="article__list-item article--code">
+          &lt;main&gt; &lt;/main&gt; - Primary content of the document
+        </li>
+        <li class="article__list-item article--code">
+           &lt;footer&gt; &lt;/footer&gt; - copyright, contacts
+        </li>
+      </ul>
+    </div>
 
-  
+    <div class="article__cell">
+      <h2 class="article__list-heading">Sections</h2>
+      <ul class="article__list">
+        <li class="article__list-item article--code">
+           &lt;article&gt; &lt;/article&gt; - Self-contained composition (blog post, news story)
+        </li>
+        <li class="article__list-item article--code">
+          &lt;section&gt; &lt;/section&gt; - Thematic grouping of content
+        </li>
+        <li class="article__list-item article--code">
+           &lt;aside&gt; &lt;/aside&gt; - Sidebar or tangential content
+        </li>
+        <li class="article__list-item article--code">
+           &lt;nav&gt; &lt;/nav&gt; - Navigation linkss
+        </li>
+      </ul>
+    </div>
+
+    <div class="article__cell">
+      <h2 class="article__list-heading">Text</h2>
+      <ul class="article__list">
+        <li class="article__list-item article--code">
+           &lt;h1&gt; to &lt;h6&gt; - Hierarchical headings
+        </li>
+        <li class="article__list-item article--code">
+          &lt;p&gt; &lt;/p&gt;- Paragraph
+        </li>
+        <li class="article__list-item article--code">
+           &lt;blockquote&gt; &lt;/blockquote&gt;- Extended quotation
+        </li>
+        <li class="article__list-item article--code">
+           &lt;code&gt; &lt;/code&gt;  - Code snippet
+        </li>
+        <li class="article__list-item article--code">
+           &lt;ol&gt; &lt;/ol&gt;  - Ordered list
+        </li>
+        <li class="article__list-item article--code">
+           &lt;ul&gt; &lt;/ul&gt;  - Unordered lis
+        </li>
+        <li class="article__list-item article--code">
+           &lt;li&gt; &lt;/li&gt;  - List item
+        </li>
+      </ul>
+    </div>
+
+    <h2 class="article__heading">Why Semantic HTML Matters</h2>
+    <ul class="article__list">
+      <li class="article__list-item">
+         Accessibility: Screen readers use semantic tags to navigate content
+      </li>
+      <li class="article__list-item">
+        SEO: Search engines better understand page structure
+      </li>
+      <li class="article__list-item">
+          Maintainability: Clearer code organization
+      </li>
+      <li class="article__list-item">
+          Future Compatibility: Standards-compliant markup lasts longer
+      </li>
+    </ul>
+
+    <div class="article__cell">
+      <h2 class="article__list-heading article--warning">Best Practices for Semantic HTML</h2>
+      <ul class="article__list">
+        <li class="article__list-item">
+           Start with structure before styling
+        </li>
+        <li class="article__list-item">
+          Choose the most specific tag available
+        </li>
+        <li class="article__list-item">
+            Maintain proper hierarchy (h1 > h2 > h3)
+        </li>
+        <li class="article__list-item">
+            Validate regularly using W3C validator
+        </li>
+        <li class="article__list-item">
+            Test with screen readers to ensure accessibility
+        </li>
+      </ul>
+    </div>
+    <p class="article__paragraph">
+      Semantic HTML forms the foundation of modern web development.
+      By properly using these tags, you create websites that are more accessible,
+      maintainable, and search-engine friendly.
+    </p>
   </div>
 </div>
