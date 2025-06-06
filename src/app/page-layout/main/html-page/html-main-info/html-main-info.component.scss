@@ -7,11 +7,11 @@
   @include background-snow;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   
     @include tablet-min-width {
       padding: 32px 96px;
-      gap: 24px;
+      gap: 38px;
     }
 }
 
@@ -35,6 +35,12 @@
   color: var(--red-warning);
   font-size: 18px;
   
+}
+
+.article__item {
+  margin-inline-start: 20px;
+  padding-top: 12px;
+
 }
 
 .article__list-item {

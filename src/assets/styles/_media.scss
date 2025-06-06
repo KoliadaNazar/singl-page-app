@@ -9,11 +9,17 @@ $mobile-max-width: 767px;
   }
 }
 
-
+$large-desktop-min-width: 1440px;
 $desktop-min-width: 1281px;
 $laptop-min-width: 1024px;
 $tablet-min-width: 768px;
 $mobile-min-width: 380px;
+
+@mixin large-desktop-min-width {
+  @media(min-width:$large-desktop-min-width){
+    @content;
+  }
+}
 
 @mixin mobile-min-width {
   @media (min-width: $mobile-min-width) {

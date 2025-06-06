@@ -2,13 +2,13 @@
 @use 'mixins' as *;
 
 
-.cards-categories__inner {
+.cards__inner {
   display: grid;
   place-items: center;
   overflow-x: auto;
 }
 
-.cards-grid {
+.cards__grid {
   position: relative;
   display: grid;
 	grid-column-gap: 16px;
@@ -17,7 +17,7 @@
   grid-auto-columns: auto;
 }
 
-.cards-grid__link {
+.card__link {
   width: 140px;
   height: 200px;
   border-left: 3px double var(--main-light-blue-transparent);
@@ -25,29 +25,32 @@
   border-radius: 8px;
   margin: 8px 0 20px 0;
   transition: transform 0.2s ease-in-out;
+  @include flex-center;
+
   @include desktop-min-width {
-    height: 240px;
-    width: 172px;
+    border-left: 4px double var(--main-light-blue-transparent);
+    border-top: 4px double var(--main-light-blue-transparent);
+    height: 270px;
+    width: 200px;
    
   }
 }
-.cards-grid__link:hover {
+
+.card__link:hover {
   transform: translate(3%, -1%) scale(1.03);
 }
 
 .card__img {
-  background: transparent;
   object-fit: contain; 
 }
 
-.cards-heading {
+.cards__heading-wrap {
   padding-inline-end:16px;
   display:flex;
   justify-content: space-between;
 }
 
-.cards-heading__link,
-.cards-heading__title {
+.cards__heading-link {
   font-size: 16px;
   font-weight: 500;
   display: inline-flex;

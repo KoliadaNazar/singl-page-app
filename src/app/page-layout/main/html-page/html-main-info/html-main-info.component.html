@@ -61,10 +61,199 @@
       HTML forms are used to collect user input and sendit to a server.
       Forms contain various elements that let users enter data.
     </p>
-    <h2 class="article__list-heading ">Basic Structure</h2> 
+    <h2 class="article__list-heading ">An HTML form is defined using the &lt;form&gt; 
+       element. It usually includes various input fields and a submit button:
+    </h2> 
     <p class="article__paragraph article--code">
-       &lt;form action="/submit" method="post"&gt;form elements here&lt;/form&gt; 
+      &lt;form action="/submit" method="post" target="_blank"&gt;  <br>
+       &nbsp;&lt;label for="name"> Name:&lt;/label&gt;  <br>
+       &nbsp;&lt;input type="text" id="name" name="name" required&gt;  <br>
+       &nbsp;&lt;label for="email"> Email:&lt;/label&gt;  <br>
+       &nbsp;&lt;input type="email" id="email" name="email" required&gt;  <br>
+       &nbsp;&lt;button type="submit">Submit&lt;/button&gt;  <br>
+      &lt;/form&gt;
     </p>
+
+    <h2 class="article__heading"> HTML Input-Label Connection </h2>
+    <p class="article__paragraph ">
+      In HTML, the &lt;label&gt; element is used to define a label for an &lt;input&gt; element.
+      Connecting them improves accessibility and makes the form easier to use—especially for
+      screen readers and when clicking labels to focus inputs.
+    </p>
+    <h2 class="article__list-heading"> Two Ways to Connect a Label to an Input: </h2>
+
+    <div class="article__cell">
+      <h2 class="article__list-heading">
+        1. Using the for Attribute. The for attribute in &lt;label&gt; must match the id of the input.
+      </h2>
+      <p class="article__paragraph article--code">
+        &lt;label for="email"&gt; Email: &lt;/label&gt;  <br>
+        &lt;input type="email" id="email" name="email"&gt;
+      </p>
+    </div>
+
+    <div class="article__cell">
+      <h2 class="article__list-heading">
+        2.Wrapping the Input Inside the Label.You can also nest the input directly inside the label.
+      </h2>
+      <p class="article__paragraph article--code">
+        &lt;label&gt; Email:   <br>
+         &nbsp;&lt;input type="email" name="email"&gt; <br>
+        &lt;/label&gt;
+      </p> <br>
+      <h2 class="article__list-heading article--warning">Why It Matters</h2>
+      <ul class="article__list">
+        <li class="article__list-item">
+          Improves accessibility.
+        </li>
+        <li class="article__list-item">
+          Icreases clickable area (especially useful for checkboxes and radio buttons).
+        </li>
+         <li class="article__list-item">
+          Helps with form validation and screen reader compatibility.
+        </li>
+      </ul>
+    </div>
+
+   
+
+    <div class="article__cell">
+      <h2 class="article__list-heading">Main Form Attributes</h2>
+      <ul class="article__list">
+        <li class="article__item">
+           <code>action:</code> attribute defines the
+            action to be performed when the form is submitted.
+        </li>
+        <li class="article__item">
+          <code>method:</code> Defines how the data is sent (GET or POST). <br>
+          <p class="article--warning">Tip: Always use POST if the form data
+             contains sensitive or personal information!</p>
+        </li>
+         <li class="article__item">
+          <code>target</code>  attribute specifies where to display the response that is
+           received after submitting the form  (_blank, _self ,_parent, _top)
+        </li>
+      </ul>
+    </div>
+
+     <div class="article__cell">
+      <h2 class="article__list-heading">Basic form Elements</h2>
+      <ul class="article__list">
+        <li class="article__item">
+          <code>&lt;input&gt;</code> - tag creates an interactive form control that allows users to enter data;
+        </li>
+        <li class="article__item">
+          <code>&lt;label&gt;</code> - defines a text description for an
+          &lt;input&gt;, &lt;select&gt;, or &lt;textarea&gt; element.;
+        </li>
+        <li class="article__item">
+          <code>&lt;textarea&gt;</code> - defines a multi-line text input;
+        </li>
+        <li class="article__item">
+          <code>&lt;fieldset&gt;</code> - element defines a caption for the fieldset element;
+        </li>
+        <li class="article__item">
+         <code> &lt;legend&gt;</code> -  element defines a caption for the  &lt;fieldset&gt; element;
+        </li>
+         <li class="article__item">
+          <code>&lt;select&gt;</code> - creates a dropdown list of options;
+        </li>
+        <li class="article__item">
+          <code>&lt;option&gt;</code> -element defines an option that can be selected.
+        </li>
+      </ul>
+    </div>
+
+    <h2 class="article__heading"> HTML Input Types </h2>
+     <div class="article__cell">
+      <h2 class="article__list-heading">Here are the different input types you can use in HTML:</h2>
+      <ul class="article__list">
+
+        <li class="article__item">
+          <code>&lt;input type="button"&gt;</code> - defines a button;
+        </li>
+
+        <li class="article__item">
+          <code>&lt;input type="text"&gt;</code> -  defines a single-line text input field;
+        </li>
+
+        <li class="article__item">
+          <code>&lt;input type="password"&gt;</code> -  defines a password field;
+        </li>
+
+        <li class="article__item">
+          <code>&lt;input type="submit&gt;</code> -  defines a button
+           for submitting form data to a form-handler;
+        </li>
+        <li class="article__item">
+          <code>&lt;input type="reset"&gt;</code> - defines
+           a reset button that will reset all form values to their default values;
+        </li>
+
+         <li class="article__item">
+          <code>&lt;input type="radio"&gt;</code> - defines a redio button.
+          Radio buttons let a user select ONLY ONE of a limited number of choices;
+        </li>
+
+        <li class="article__item">
+          <code>&lt;input type="checkbox"&gt;</code> - let a user select ZERO or MORE
+           options of a limited number of choices
+        </li>
+
+        <li class="article__item">
+          <code>&lt;input type="datetime-local"&gt;</code> - specifies a date and time input field,
+           with no time zone.
+        </li>
+
+        <li class="article__item">
+          <code>&lt;input type="date"&gt;</code> -  is used for input fields that should contain a date;
+        </li>
+
+        <li class="article__item">
+          <code>&lt;input type="email"&gt;</code> - is used for input fields that should contain an e-mail address;
+        </li>
+
+        <li class="article__item">
+          <code>&lt;input type="tel"&gt;</code> - is used for input fields that should contain a telephone number;
+        </li>
+      </ul>
+    </div>
+
+    <h2 class="article__heading">HTML Input Attributes</h2>
+    <div class="article__cell">
+      <h2 class="article__list-heading">
+        The input value attribute specifies an initial value for an input field:
+      </h2>
+      <ul class="article__list">
+        <li class="article__item">
+          <code>value</code> - attribute specifies an initial value for an input field;
+        </li>
+        <li class="article__item">
+          <code>readonly</code> - attribute specifies that an input field is read-only;
+          (A read-only input field cannot be modified )
+        </li>
+        <li class="article__item">
+          <code>disabled</code> - ttribute specifies that an input field should be disabled;
+          (A disabled input field is unusable and un-clickable)
+        </li>
+         <li class="article__item">
+          <code>placeholder</code> -  attribute specifies a short hint that describes
+           the expected value of an input field (a sample value of the expected format).
+        </li>
+        <li class="article__item">
+          <code>autofocus</code> - pecifies that an input
+           field should automatically get focus when the page loads;
+        </li>
+        <li class="article__item">
+          <code>autofocus</code> - pecifies that an input
+           field should automatically get focus when the page loads;
+        </li>
+        <li class="article__item">
+          <code>autocomplete</code> - attribute specifies whether a form
+           or an input field should have autocomplete on or off;
+        </li>
+      </ul>
+    </div>
 
   </div>
 </div>

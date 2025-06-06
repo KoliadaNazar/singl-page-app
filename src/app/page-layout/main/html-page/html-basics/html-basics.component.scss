@@ -6,11 +6,11 @@
   background: var(--white);
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   
     @include tablet-min-width {
       padding: 32px 96px;
-      gap: 24px;
+      gap: 38px;
     }
 }
 

@@ -52,6 +52,7 @@
 
 .info-card__title {
   position:relative;
+  z-index: 0;
   border-top: 1px solid var(--main-light-blue-transparent);
   height: 50px;
   width: inherit;
@@ -59,7 +60,7 @@
   //or
   background: var(--dark-red-gradient);
   background-size: 100% 100%;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight:600;
   color: var(--white);
   @include flex-center;
@@ -67,10 +68,15 @@
 }
 
 .info-card__title:after {
+  z-index: 1;
   content: "";
   position: absolute;
   width: 100%;
   height: 1px;
   bottom: 14px;
   background: var(--blue-tiny--divider);
+   
+    @include laptop-min-width {
+      height: 2px;
+    }
 }
