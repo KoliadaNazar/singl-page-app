@@ -19,7 +19,7 @@
 
 .card__link {
   width: 140px;
-  height: 200px;
+  height: 210px;
   border-left: 3px double var(--main-light-blue-transparent);
   border-top: 3px double var(--main-light-blue-transparent);
   border-radius: 8px;
@@ -27,11 +27,11 @@
   transition: transform 0.2s ease-in-out;
   @include flex-center;
 
-  @include desktop-min-width {
+  @include tablet-min-width {
     border-left: 4px double var(--main-light-blue-transparent);
     border-top: 4px double var(--main-light-blue-transparent);
     height: 270px;
-    width: 200px;
+    width: 180px;
    
   }
 }
