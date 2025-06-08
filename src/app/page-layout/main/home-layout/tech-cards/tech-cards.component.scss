@@ -30,6 +30,8 @@
   @include tablet-min-width {
     border-left: 4px double var(--main-light-blue-transparent);
     border-top: 4px double var(--main-light-blue-transparent);
+    //border-bottom: 4px double var(--main-light-blue-transparent);
+    //border-right: 4px double var(--main-light-blue-transparent);
     height: 270px;
     width: 180px;
    
@@ -42,6 +44,7 @@
 
 .card__img {
   object-fit: contain; 
+  transform: scale(1.09); 
 }
 
 .cards__heading-wrap {

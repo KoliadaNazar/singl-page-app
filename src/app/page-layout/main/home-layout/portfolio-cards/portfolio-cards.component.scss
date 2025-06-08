@@ -113,6 +113,14 @@
   background: var(--main-light-blue);
 }
 
+.button--decore::before {
+  position: absolute;
+  content: '';
+  inset: -1px;
+  border: 2px solid var(--main-light-blue);
+  border-radius: 30px;
+}
+
 .button-border,
 .gallery__link:hover .gallery__button-wrap {
   opacity: 1;
