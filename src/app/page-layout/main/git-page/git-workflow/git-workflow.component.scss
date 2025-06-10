@@ -16,6 +16,10 @@
 .article__heading {
   position: relative;
   text-align: center;
+  
+   @include tablet-min-width {
+      font-size: 24px;
+    }
 }
 
 .article__heading:after {

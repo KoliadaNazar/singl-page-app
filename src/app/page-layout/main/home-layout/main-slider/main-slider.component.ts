@@ -19,7 +19,7 @@ export class MainSliderComponent implements AfterViewInit, OnDestroy {
     this.slides = Array.from(this.sliderSection.nativeElement.querySelectorAll('.slide'));
     this.updateSlide();
 
-    this.autoSlideSub = interval(9000).subscribe(() => this.nextSlide());
+    this.autoSlideSub = interval(7000).subscribe(() => this.nextSlide());
   }
 
   ngOnDestroy() {

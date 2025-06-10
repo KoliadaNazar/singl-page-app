@@ -2,7 +2,7 @@
 @use 'mixins' as *;
 
 .article__inner {
-  padding: 12px;
+  padding: 18px;
   background: var(--white);
   display: flex;
   flex-direction: column;
@@ -15,14 +15,17 @@
 
 .article__cell {
   margin: 0 auto;
-  background: var(--main-light-blue);
-  padding: 30px 20px;
+  background: rgba(255, 219, 128, 0.5);;
+  padding: 10px 30px 30px 30px;
   border-radius: 30px;
   max-width: 480px;
-
-     @include tablet-min-width {
-    width: 700px;
-  }
+  display: grid;
+  justify-content: center;
+  
+    @include mobile-min-width {
+      width: 340px;
+    }
+     
 }
 
 .article__heading {
@@ -41,13 +44,10 @@
 .article--warning {
   color: var(--red-warning);
   font-size: 18px;
-  
 }
 
 .article__list-item {
   margin-inline-start: 30px;
   padding-top: 20px;
-  list-style-type: disc;
   font-size: 18px;
-  
 }

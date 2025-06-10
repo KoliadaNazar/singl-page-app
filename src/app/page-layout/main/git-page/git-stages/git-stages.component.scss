@@ -13,6 +13,13 @@
     }
 }
 
+.article__heading {
+
+   @include tablet-min-width {
+      font-size: 24px;
+    }
+}
+
 
 .article__separator {
   width: 100%;

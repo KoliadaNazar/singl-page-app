@@ -24,6 +24,17 @@
   }
 }
 
+.article__heading {
+    @include tablet-min-width {
+      font-size: 24px;
+    }
+  }
+
+  .article_list-heading {
+    @include tablet-min-width {
+      font-weight: 600;
+    }
+  }
 
 .article__list-item {
   margin-inline-start: 30px;
