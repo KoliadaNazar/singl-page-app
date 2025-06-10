@@ -7,6 +7,8 @@ import { interval, Subscription } from 'rxjs';
   templateUrl: './main-slider.component.html',
   styleUrls: ['./main-slider.component.scss']
 })
+
+
 export class MainSliderComponent implements AfterViewInit, OnDestroy {
   @ViewChild('sliderSection') sliderSection!: ElementRef<HTMLElement>;
   currentSlideIndex = 0;
@@ -17,7 +19,7 @@ export class MainSliderComponent implements AfterViewInit, OnDestroy {
     this.slides = Array.from(this.sliderSection.nativeElement.querySelectorAll('.slide'));
     this.updateSlide();
 
-    this.autoSlideSub = interval(5000).subscribe(() => this.nextSlide());
+    this.autoSlideSub = interval(2999000).subscribe(() => this.nextSlide());
   }
 
   ngOnDestroy() {
