@@ -26,6 +26,8 @@ export class MainSliderComponent implements AfterViewInit, OnDestroy {
     this.autoSlideSub?.unsubscribe();
   }
 
+  
+
   nextSlide() {
     if (!this.slides.length) return;
     this.currentSlideIndex = (this.currentSlideIndex + 1) % this.slides.length;
