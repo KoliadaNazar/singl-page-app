@@ -15,9 +15,11 @@
   display: grid;
   grid-row-gap: 20px;
   justify-items: center;
+  
     @include tablet-min-width {
       display: flex;
       justify-content: space-evenly;
+      align-items: center;
       gap: 30px;
     }
 }
@@ -46,12 +48,10 @@
 
 .banner__image-wrap {
   border-radius: 30px;
-  height: 200px;
-  width: 180px;
-  @include tablet-min-width {
-      height: 260px;
-      width: 220px;
-    }
+  flex-shrink: 0;
+  height: 250px;
+  width: 210px;
+
 }
 
 .banner__img {

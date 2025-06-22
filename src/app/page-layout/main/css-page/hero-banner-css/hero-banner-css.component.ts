@@ -6,6 +6,12 @@ import { Component } from '@angular/core';
   templateUrl: './hero-banner-css.component.html',
   styleUrl: './hero-banner-css.component.scss'
 })
+
+
+
 export class HeroBannerCssComponent {
+
+  imagePath = "/img/css-base.png"
+
 
 }
