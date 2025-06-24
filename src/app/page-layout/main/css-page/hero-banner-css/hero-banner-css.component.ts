@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 
 export class HeroBannerCssComponent {
 
-  imagePath = "/img/css-base.png"
+  imagePath = "./img/css-base.png"
 
 
 }
